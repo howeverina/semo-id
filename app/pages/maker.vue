@@ -10,6 +10,7 @@
             >
                 <div>{{ name }}</div>
             </div>
+            <div @click="exportImg" class="tab-item download">다운로드!</div>
         </div>
         <div id="content-items">
             <div v-if="activeTab === 0" class="content-item act">   
@@ -261,6 +262,7 @@
         </div>
     </div>
     <div id="maker-wrapper">
+        <div class="maker-second-wrapper" id="page1">
         <div id="maker1" class="maker">
             <div id="titleinput">
                 <div style="font-family: '116Subakhwa';">세모이드</div>
@@ -287,7 +289,8 @@
             <Svg :src="`/svg/pants/${settings.pants.code}-stroke.svg`" :stroke=settings.pants.color :key="settings.pants.code+settings.pants.color" class="stroke"></Svg>
             <Svg src="/svg/page01-cut.svg" stroke="#55339955"></Svg>
             <Svg src="/svg/page01-fold.svg" stroke="#00000011"></Svg>
-        </div>
+        </div></div>
+        <div class="maker-second-wrapper" id="page2">
         <div id="maker2" class="maker">
             <Svg :src="`/svg/back/${settings.back.code}-preview-fill.svg`" :fill=settings.back.color :key="settings.back.code+settings.back.color"></Svg>
             <Svg :src="`/svg/skin/${settings.skin.code}-preview-fill.svg`" :fill=settings.skin.color :key="settings.skin.code+settings.skin.color"></Svg>
@@ -323,7 +326,7 @@
             <Svg src="/svg/stand-contrast.svg" :stroke=settings.stand.contrast :key=settings.stand.contrast ></Svg>
             <Svg src="/svg/stand-stroke.svg" stroke="#55339955" ></Svg>
             <Svg src="/svg/page02-fold.svg" stroke="#00000011"></Svg>
-        </div>
+        </div></div>
     </div>
 </template>
 
@@ -331,6 +334,7 @@
     
     import { ref } from 'vue' // 이 라인이 반드시 있어야 합니다!
     import Svg from '../components/Svg.vue'
+    import { toPng } from 'html-to-image';
 
     const activeTab = ref(0) // 2. 현재 활성화된 탭 상태 관리
     const tabNames = ['피부', '눈썹', '왼눈', '오른눈', '입', '홍조', '뒷머리', '앞머리', '옆머리L', '옆머리R', '머리+', '머리+', '머리+', '상의', '하의', '겉옷', '양말', '신발', '스탠드']
@@ -472,6 +476,34 @@
         settings.value[part].code = code
     }
 
+    const exportImg = async () => {
+  // 클라이언트 사이드에서만 라이브러리 로드
+    if (process.client) {
+        try {
+            // 1번 이미지 생성 및 다운로드
+            const dataUrl1 = await toPng(document.querySelector('#page1'), { cacheBust: true });
+            saveAs(dataUrl1, 'semoid_page01.png');
+
+            const dataUrl2 = await toPng(document.querySelector('#page2'), { cacheBust: true });
+            saveAs(dataUrl2, 'semoid_page02.png');
+
+            alert('저장이 완료되었습니다!');
+        } catch (error) {
+            console.error('이미지 저장 중 에러 발생:', error);
+        }
+    }
+}
+
+// 다운로드를 위한 유틸리티 함수
+const saveAs = (uri, filename) => {
+  const link = document.createElement('a');
+  link.download = filename;
+  link.href = uri;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
 </script>
 
 <style>
@@ -503,7 +535,7 @@
         border-radius: 10px;
     }
 
-    .tab-item.act {
+    .tab-item.act, .tab-item.download {
         background-color: var(--accent);
         color: white;
         border: 0;
@@ -543,8 +575,11 @@
         margin: 0 auto;
         border: 1px solid var(--line);
         border-radius: 10px;
-        background-color: var(--accentbg);
         display: flex;
+    }
+    
+    .maker-second-wrapper {
+        background-color: var(--accentbg);
     }
 
     #maker-wrapper .maker {
@@ -589,5 +624,9 @@
 
     .stroke {
         filter: saturate(200%) brightness(80%) contrast(85%);
+    }
+
+    #page-break {
+        display:none;
     }
 </style>
