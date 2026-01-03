@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="489.36" height="694.56" viewBox="0.00 0.00 2039.00 2894.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g stroke-linecap="round" id="blank"/>
+<g stroke-linecap="round" id="back-stroke_복사">
+<path d="M1217.71,455.19 L1162.54,418.99 L1186.14,260.02 L1253.28,239.99 L1455.08,117.98 L1657.24,239.99 L1726.70,261.36 L1749.04,415.35 L1693.69,456.21 L1693.69,456.22" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+<path d="M1218.27,455.57 L1691.03,457.23" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+</g>
 </svg>

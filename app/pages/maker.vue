@@ -296,7 +296,7 @@
             <Svg :src="`/svg/pants/${settings.pants.code}-preview-fill.svg`" :fill=settings.pants.color :key="settings.pants.code+settings.pants.color"></Svg>
             <Svg :src="`/svg/pants/${settings.pants.code}-preview-stroke.svg`" :stroke=settings.pants.color :key="settings.pants.code+settings.pants.color" class="stroke"></Svg>
             <Svg :src="`/svg/skin/${settings.skin.code}-preview-face.svg`" :fill=settings.skin.color :key="settings.skin.code+settings.skin.color"></Svg>
-            <Svg :src="`/svg/face/${settings.face.code}-preview-fill.svg`" :fill=settings.face.color :key="settings.face.code+settings.face.color"></Svg>
+            <Svg :src="`/svg/face/${settings.face.code}-preview-face.svg`" :fill=settings.face.color :key="settings.face.code+settings.face.color"></Svg>
             <Svg :src="`/svg/eyebrows/${settings.eyebrows.code}-preview-fill.svg`" :fill=settings.eyebrows.color :key="settings.eyebrows.code+settings.eyebrows.color"></Svg>
             <Svg :src="`/svg/eyebrows/${settings.eyebrows.code}-preview-stroke.svg`" :stroke=settings.eyebrows.color :key="settings.eyebrows.code+settings.eyebrows.color" class="stroke"></Svg>
             <Svg :src="`/svg/lefteye/${settings.lefteye.code}-preview-contrast.svg`" :fill=settings.lefteye.contrast :key="settings.lefteye.code+settings.lefteye.contrast"></Svg>
@@ -361,10 +361,10 @@
             types: ['none', '일자 앞머리']
         }, leftside: {
             require: false, 
-            types: ['none', '긴 옆머리']
+            types: ['none', '짧은 옆머리', '긴 옆머리']
         }, rightside: {
             require: false, 
-            types: ['none', '긴 옆머리']
+            types: ['none', '짧은 옆머리', '긴 옆머리']
         }, add01: {
             require: false,
             types: ['none']
@@ -422,7 +422,7 @@
             code: '01',
             color: '#ffdbe1'
         }, back: {
-            code: '01',
+            code: '00',
             color: '#ff5e8e',
             contrast: '#ffffdd' // 하이라이트
         }, bang: {
