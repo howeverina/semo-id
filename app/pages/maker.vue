@@ -609,6 +609,8 @@ const saveAs = (uri, filename) => {
         border: 1px solid var(--line);
         border-radius: 10px;
         display: flex;
+        overflow: hidden;
+        gap: 1px;
     }
     
     .maker-second-wrapper {
