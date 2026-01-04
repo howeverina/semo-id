@@ -262,7 +262,7 @@
         </div>
     </div>
     <div id="maker-wrapper">
-        <div class="maker-second-wrapper" id="page1">
+        <div class="maker-second-wrapper" id="page1" ref="img01">
         <div id="maker1" class="maker">
             <div id="titleinput">
                 <div style="font-family: '116Subakhwa';">세모이드</div>
@@ -290,7 +290,7 @@
             <Svg src="/svg/page01-cut.svg" stroke="#55339955"></Svg>
             <Svg src="/svg/page01-fold.svg" stroke="#00000011"></Svg>
         </div></div>
-        <div class="maker-second-wrapper" id="page2">
+        <div class="maker-second-wrapper" id="page2" ref="img02">
         <div id="maker2" class="maker">
             <Svg :src="`/svg/back/${settings.back.code}-preview-fill.svg`" :fill=settings.back.color :key="settings.back.code+settings.back.color"></Svg>
             <Svg :src="`/svg/skin/${settings.skin.code}-preview-fill.svg`" :fill=settings.skin.color :key="settings.skin.code+settings.skin.color"></Svg>
@@ -476,15 +476,18 @@
         settings.value[part].code = code
     }
 
+    const img01 = ref('null')
+    const img02 = ref('null')
+
     const exportImg = async () => {
   // 클라이언트 사이드에서만 라이브러리 로드
     if (process.client) {
         try {
             // 1번 이미지 생성 및 다운로드
-            const dataUrl1 = await toPng(document.querySelector('#page1'), { cacheBust: true });
+            const dataUrl1 = await toPng(img01.value, { cacheBust: true });
             saveAs(dataUrl1, 'semoid_page01.png');
 
-            const dataUrl2 = await toPng(document.querySelector('#page2'), { cacheBust: true });
+            const dataUrl2 = await toPng(img02.value, { cacheBust: true });
             saveAs(dataUrl2, 'semoid_page02.png');
 
             alert('저장이 완료되었습니다!');
