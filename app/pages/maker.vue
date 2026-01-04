@@ -287,8 +287,8 @@
             <Svg :src="`/svg/shirt/${settings.shirt.code}-stroke.svg`" :stroke=settings.shirt.color :key="settings.shirt.code+settings.shirt.color" class="stroke"></Svg>
             <Svg :src="`/svg/pants/${settings.pants.code}-fill.svg`" :fill=settings.pants.color :key="settings.pants.code+settings.pants.color"></Svg>
             <Svg :src="`/svg/pants/${settings.pants.code}-stroke.svg`" :stroke=settings.pants.color :key="settings.pants.code+settings.pants.color" class="stroke"></Svg>
-            <Svg src="/svg/page01-cut.svg" stroke="#55339955"></Svg>
-            <Svg src="/svg/page01-fold.svg" stroke="#00000011"></Svg>
+            <Svg src="/svg/page01-cut.svg" stroke="#55339977"></Svg>
+            <Svg src="/svg/page01-fold.svg" stroke="#55339933"></Svg>
         </div></div>
         <div class="maker-second-wrapper" id="page2" ref="img02">
         <div id="maker2" class="maker">
@@ -316,17 +316,17 @@
             <Svg :src="`/svg/bang/${settings.bang.code}-stroke.svg`" :fill=settings.back.color :key="settings.bang.code+settings.back.color"></Svg>
             <Svg :src="`/svg/rightside/${settings.rightside.code}-stroke.svg`" :fill=settings.back.color :key="settings.rightside.code+settings.back.color"></Svg>
             <Svg :src="`/svg/leftside/${settings.leftside.code}-stroke.svg`" :fill=settings.back.color :key="settings.leftside.code+settings.back.color"></Svg>
-            <Svg :src="`/svg/rightside/${settings.rightside.code}-stroke.svg`" stroke="#55339955" :key=settings.rightside.code ></Svg>
-            <Svg :src="`/svg/leftside/${settings.leftside.code}-stroke.svg`" stroke="#55339955" :key=settings.leftside.code ></Svg>
+            <Svg :src="`/svg/rightside/${settings.rightside.code}-stroke.svg`" stroke="#55339977" :key=settings.rightside.code ></Svg>
+            <Svg :src="`/svg/leftside/${settings.leftside.code}-stroke.svg`" stroke="#55339977" :key=settings.leftside.code ></Svg>
             <Svg :src="`/svg/bang/${settings.bang.code}-stroke.svg`" :fill=settings.back.color :key="settings.bang.code+settings.back.color"></Svg>
             <Svg :src="`/svg/back/${settings.back.code}-fill.svg`" :fill=settings.back.color :key="settings.back.code+settings.back.color"></Svg>
             <Svg src="/svg/hairlight-fill.svg" :fill=settings.back.contrast :key=settings.back.contrast ></Svg>
-            <Svg :src="`/svg/bang/${settings.bang.code}-stroke.svg`" stroke="#55339955" :key=settings.bang.code ></Svg>
-            <Svg :src="`/svg/back/${settings.back.code}-stroke.svg`" stroke="#55339955" :key=settings.back.code ></Svg>
+            <Svg :src="`/svg/bang/${settings.bang.code}-stroke.svg`" stroke="#55339977" :key=settings.bang.code ></Svg>
+            <Svg :src="`/svg/back/${settings.back.code}-stroke.svg`" stroke="#55339977" :key=settings.back.code ></Svg>
             <Svg src="/svg/stand-fill.svg" :fill=settings.stand.color :key=settings.stand.color ></Svg>
             <Svg src="/svg/stand-contrast.svg" :stroke=settings.stand.contrast :key=settings.stand.contrast ></Svg>
-            <Svg src="/svg/stand-stroke.svg" stroke="#55339955" ></Svg>
-            <Svg src="/svg/page02-fold.svg" stroke="#00000011"></Svg>
+            <Svg src="/svg/stand-stroke.svg" stroke="#55339977" ></Svg>
+            <Svg src="/svg/page02-fold.svg" stroke="#55339933"></Svg>
         </div></div>
     </div>
 </template>
