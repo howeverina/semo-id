@@ -294,6 +294,7 @@
         <div id="maker2" class="maker">
             <Svg :src="`/svg/back/${settings.back.code}-preview-fill.svg`" :fill=settings.back.color :key="settings.back.code+settings.back.color"></Svg>
             <Svg :src="`/svg/skin/${settings.skin.code}-preview-fill.svg`" :fill=settings.skin.color :key="settings.skin.code+settings.skin.color"></Svg>
+            <Svg :src="`/svg/face/${settings.face.code}-preview-fill.svg`" :fill=settings.face.color :key="settings.face.code+settings.face.color"></Svg>
             <Svg :src="`/svg/shirt/${settings.shirt.code}-preview-fill.svg`" :fill=settings.shirt.color :key="settings.shirt.code+settings.shirt.color"></Svg>
             <Svg :src="`/svg/shirt/${settings.shirt.code}-preview-stroke.svg`" :stroke=settings.shirt.color :key="settings.shirt.code+settings.shirt.color" class="stroke"></Svg>
             <Svg :src="`/svg/pants/${settings.pants.code}-preview-fill.svg`" :fill=settings.pants.color :key="settings.pants.code+settings.pants.color"></Svg>
