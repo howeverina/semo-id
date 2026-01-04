@@ -484,11 +484,40 @@
   // 클라이언트 사이드에서만 라이브러리 로드
     if (process.client) {
         try {
-            // 1번 이미지 생성 및 다운로드
-            const dataUrl1 = await toPng(img01.value, { cacheBust: true });
+            const targetWidth = 2480
+            const targetHeight = 3472
+
+            const originalWidth1 = document.querySelector('#page1').offsetWidth
+            const originalHeight1 = document.querySelector('#page1').offsetHeight
+            const originalWidth2 = document.querySelector('#page2').offsetWidth
+            const originalHeight2 = document.querySelector('#page2').offsetHeight
+
+            const dataUrl1 = await toPng(img01.value, { 
+                cacheBust: true,
+                pixelRatio: 1,
+                width: targetWidth, 
+                height: targetHeight, 
+                style: {
+                    transform: `scale(${targetWidth / originalWidth1})`,
+                    transformOrigin: 'top left',
+                    width: `${originalWidth1}px`,
+                    height: `${originalHeight1}px`,
+                    }
+                });
             saveAs(dataUrl1, 'semoid_page01.png');
 
-            const dataUrl2 = await toPng(img02.value, { cacheBust: true });
+            const dataUrl2 = await toPng(img02.value, { 
+                cacheBust: true,
+                pixelRatio: 1,
+                width: targetWidth, 
+                height: targetHeight, 
+                style: {
+                    transform: `scale(${targetWidth / originalWidth2})`,
+                    transformOrigin: 'top left',
+                    width: `${originalWidth2}px`,
+                    height: `${originalHeight2}px`,
+                    }
+                });
             saveAs(dataUrl2, 'semoid_page02.png');
 
             alert('저장이 완료되었습니다!');
@@ -593,10 +622,6 @@ const saveAs = (uri, filename) => {
         max-height: 700px;
         width: 100%;
         max-width: 500px;
-    }
-
-    #maker1 {
-        border-right: 1px solid var(--accent);
     }
 
     #titleinput {
