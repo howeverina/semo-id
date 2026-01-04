@@ -572,7 +572,7 @@ const saveAs = (uri, filename) => {
 
     #maker-wrapper {
         width: 100%;
-        height: 70vw;
+        aspect-ratio: 1 / 0.7;
         max-width: 1000px;
         max-height: 700px;
         margin: 0 auto;
@@ -583,13 +583,14 @@ const saveAs = (uri, filename) => {
     
     .maker-second-wrapper {
         background-color: var(--accentbg);
+        width: 50%;
     }
 
     #maker-wrapper .maker {
         position: relative;
-        height: 70vw;
+        aspect-ratio: 1 / 1.4;
         max-height: 700px;
-        width: 50vw;
+        width: 100%;
         max-width: 500px;
     }
 

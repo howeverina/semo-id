@@ -37,6 +37,10 @@
     --fg: #1e1f25;
   }
 
+  * {
+    box-sizing: border-box;
+  }
+
   body {
     font-family: 'GyeonggiMillenniumTitle';
     color: var(--fg);
