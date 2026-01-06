@@ -6,7 +6,7 @@
                 :key="index"
                 class="tab-item" 
                 :class="{ act: activeTab === index }"
-                @click="activeTab = index"
+                @click="clickTab(index)"
             >
                 <div>{{ name }}</div>
             </div>
@@ -327,17 +327,30 @@
             <Svg src="/svg/stand-contrast.svg" :stroke=settings.stand.contrast :key=settings.stand.contrast ></Svg>
             <Svg src="/svg/stand-stroke.svg" stroke="#55339977" ></Svg>
             <Svg src="/svg/page02-fold.svg" stroke="#55339933"></Svg>
+            <div style="position: relative; top: 0; left: 0;" id="add01">
+                <Svg :src="`/svg/add/${settings.add01.code}-fill.svg`" :fill=settings.add01.color :key="settings.add01.code+settings.add01.color"></Svg>
+                <Svg :src="`/svg/add/${settings.add01.code}-stroke.svg`" stroke="#55339977" :key=settings.add01.code></Svg>
+            </div>
+            <div style="position: relative; top: 0; left: 0;" id="add02">
+                <Svg :src="`/svg/add/${settings.add02.code}-fill.svg`" :fill=settings.add02.color :key="settings.add02.code+settings.add02.color"></Svg>
+                <Svg :src="`/svg/add/${settings.add02.code}-stroke.svg`" stroke="#55339977" :key=settings.add02.code></Svg>
+            </div>
+            <div style="position: relative; top: 0; left: 0;" id="add03">
+                <Svg :src="`/svg/add/${settings.add03.code}-fill.svg`" :fill=settings.add03.color :key="settings.add02.code+settings.add03.color"></Svg>
+                <Svg :src="`/svg/add/${settings.add03.code}-stroke.svg`" stroke="#55339977" :key=settings.add03.code></Svg>
+            </div>
         </div></div>
     </div>
 </template>
 
 <script setup>
     
-    import { ref } from 'vue' // 이 라인이 반드시 있어야 합니다!
+    import { ref } from 'vue'
     import Svg from '../components/Svg.vue'
     import { toPng } from 'html-to-image';
 
-    const activeTab = ref(0) // 2. 현재 활성화된 탭 상태 관리
+    const activeTab = ref(0) 
+    
     const tabNames = ['피부', '눈썹', '왼눈', '오른눈', '입', '홍조', '뒷머리', '앞머리', '옆머리L', '옆머리R', '머리+', '머리+', '머리+', '상의', '하의', '겉옷', '양말', '신발', '스탠드']
     const items = {
         skin: {
@@ -354,7 +367,7 @@
             types: ['none', '동그란 눈']
         }, mouth: {
             require: false,
-            types: ['none', '고양이 입']
+            types: ['none', '고양이 입', '일자 입', '시옷 입']
         }, face: {
             require: true,
             types: ['none', '홍조']
@@ -363,7 +376,7 @@
             types: ['none', '볼륨 단발']
         }, bang: {
             require: true, 
-            types: ['none', '일자 앞머리']
+            types: ['none', '일자 앞머리', '짧은 앞머리']
         }, leftside: {
             require: false, 
             types: ['none', '짧은 옆머리', '긴 옆머리']
@@ -372,13 +385,13 @@
             types: ['none', '짧은 옆머리', '긴 옆머리']
         }, add01: {
             require: false,
-            types: ['none']
+            types: ['none', '짧은 묶음머리']
         }, add02: {
             require: false,
-            types: ['none']
+            types: ['none', '짧은 묶음머리']
         }, add03: {
             require: false,
-            types: ['none']
+            types: ['none', '짧은 묶음머리']
         }, shirt: {
             require: true,
             types: ['none', '교복 셔츠']
@@ -440,13 +453,13 @@
             code: '01',
             color: ''
         }, add01: {
-            code: '01',
+            code: '00',
             color: '#ff5e8e'
         }, add02: {
-            code: '01',
+            code: '00',
             color: '#ff5e8e'
         }, add03: {
-            code: '01',
+            code: '00',
             color: '#ff5e8e'
         }, shirt: {
             code: '01',
@@ -525,6 +538,49 @@
             console.error('이미지 저장 중 에러 발생:', error);
         }
     }
+}
+
+if (process.client) {
+    document.querySelector('#maker2').addEventListener('mousedown', (e) => {
+        const val = activeTab.value;
+        
+        if ([10, 11, 12].includes(val)) {
+            let el
+
+            if (val === 10) {
+                el = document.querySelector('#add01');
+            } else if (val === 11) {
+                el = document.querySelector('#add02');
+            } else if (val === 12) {
+                el = document.querySelector('#add03');
+            }
+
+            const firstPoint = { x: e.offsetX, y: e.offsetY };
+            const firstPosition = {
+                x: parseInt(el.style.left) || 0,
+                y: parseInt(el.style.top) || 0
+            };
+
+            const handleMouseUp = (e2) => {
+                const endPoint = { x: e2.offsetX, y: e2.offsetY };
+                
+                const moveX = endPoint.x - firstPoint.x;
+                const moveY = endPoint.y - firstPoint.y;
+
+                const newX = firstPosition.x + moveX;
+                const newY = firstPosition.y + moveY;
+
+                el.style.left = `${newX}px`;
+                el.style.top = `${newY}px`;
+            }
+
+            document.querySelector('#maker2').addEventListener('mouseup', handleMouseUp, { once: true })
+        }
+    })
+}
+
+const clickTab = function(index) {
+    activeTab.value = index
 }
 
 // 다운로드를 위한 유틸리티 함수
