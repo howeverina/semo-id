@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="489.36" height="694.56" viewBox="0.00 0.00 2039.00 2894.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g stroke-linecap="round" id="pants-fill">
-<path d="M256.41,913.45 L414.10,947.82 L447.80,948.50 L599.76,912.78 L256.41,913.45 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+<g stroke-linecap="round" transform="translate(-818.00, -1360.00)" id="pants-fill_복사">
+<path d="M1076.06,2272.59 L1095.33,2356.80 L1398.12,2356.67 L1417.56,2273.55 L1076.06,2272.59 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
 </g>
 </svg>

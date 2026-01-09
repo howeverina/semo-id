@@ -326,6 +326,10 @@
             <Svg src="/svg/stand-fill.svg" :fill=settings.stand.color :key=settings.stand.color ></Svg>
             <Svg src="/svg/stand-contrast.svg" :stroke=settings.stand.contrast :key=settings.stand.contrast ></Svg>
             <Svg src="/svg/stand-stroke.svg" stroke="#55339977" ></Svg>
+            <Svg :src="`/svg/skirt/${settings.skirt.code}-fill.svg`" :fill=settings.skirt.color :key="settings.skirt.code+settings.skirt.color" ></Svg>
+            <Svg :src="`/svg/skirt/${settings.skirt.code}-stroke.svg`" :stroke=settings.skirt.color :key="settings.skirt.code+settings.skirt.color" class="stroke"></Svg>
+            <Svg :src="`/svg/skirt/${settings.skirt.code}-fold.svg`" stroke="#55339933" :key=settings.skirt.code ></Svg>
+            <Svg :src="`/svg/skirt/${settings.skirt.code}-cut.svg`" stroke="#55339977" :key=settings.skirt.code ></Svg>
             <Svg src="/svg/page02-fold.svg" stroke="#55339933"></Svg>
             <div style="position: relative; top: 0; left: 0;" id="add01">
                 <Svg :src="`/svg/add/${settings.add01.code}-fill.svg`" :fill=settings.add01.color :key="settings.add01.code+settings.add01.color"></Svg>
@@ -350,8 +354,8 @@
     import { toPng } from 'html-to-image';
 
     const activeTab = ref(0) 
-    
-    const tabNames = ['피부', '눈썹', '왼눈', '오른눈', '입', '홍조', '뒷머리', '앞머리', '옆머리L', '옆머리R', '머리+', '머리+', '머리+', '상의', '하의', '겉옷', '양말', '신발', '스탠드']
+
+    const tabNames = ['피부', '눈썹', '왼눈', '오른눈', '입', '홍조', '뒷머리', '앞머리', '옆머리L', '옆머리R', '머리+', '머리+', '머리+', '상의', '하의', '스커트', '겉옷', '양말', '신발', '스탠드']
     const items = {
         skin: {
             require: true,
@@ -397,6 +401,9 @@
             types: ['none', '교복 셔츠']
         }, pants: {
             require: true,
+            types: ['none', '속옷만', '반바지']
+        }, skirt: {
+            require: false,
             types: ['none', '교복 치마']
         }, outer: {
             require: false,
@@ -442,7 +449,7 @@
         }, back: {
             code: '00',
             color: '#ff5e8e',
-            contrast: '#ffffdd' // 하이라이트
+            contrast: '#ffadc2' // 하이라이트
         }, bang: {
             code: '01',
             color: ''
@@ -465,6 +472,9 @@
             code: '01',
             color: '#ffffff'
         }, pants: {
+            code: '01',
+            color: '#ff5e8e'
+        }, skirt: {
             code: '01',
             color: '#ff5e8e'
         }, outer: {
@@ -684,9 +694,10 @@ const saveAs = (uri, filename) => {
 
     #titleinput {
         position: absolute;
-        top: min(1.5vw, 15px);
-        left: min(2.5vw, 25px);
+        top: 0;
+        left: max(-7.5vw, -75px);
         z-index: 99;
+        transform: rotate(270deg);
     }
 
     #titleinput > div {
