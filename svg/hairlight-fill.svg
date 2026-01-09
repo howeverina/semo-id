@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="489.36" height="694.56" viewBox="0.00 0.00 2039.00 2894.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g stroke-linecap="round" id="bang-highlight">
-<path d="M379.16,205.09 C533.61,266.53 603.67,264.89 754.83,204.00 C754.83,204.00 759.34,230.22 759.34,230.22 C609.57,350.24 519.82,351.49 374.41,231.32 C374.41,231.32 379.16,205.09 379.16,205.09 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="round"/>
-<path d="M1279.65,286.30 C1423.06,343.35 1488.11,341.83 1628.47,285.29 C1628.47,285.29 1632.66,309.64 1632.66,309.64 C1493.59,421.08 1410.25,422.24 1275.24,310.65 C1275.24,310.65 1279.65,286.30 1279.65,286.30 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M241.16,204.09 C395.61,265.53 465.67,263.89 616.83,203.00 C616.83,203.00 621.34,229.22 621.34,229.22 C471.57,349.24 381.82,350.49 236.41,230.32 C236.41,230.32 241.16,204.09 241.16,204.09 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M1264.65,296.30 C1408.06,353.35 1473.11,351.83 1613.47,295.29 C1613.47,295.29 1617.66,319.64 1617.66,319.64 C1478.59,431.08 1395.25,432.24 1260.24,320.65 C1260.24,320.65 1264.65,296.30 1264.65,296.30 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="round"/>
 </g>
 </svg>

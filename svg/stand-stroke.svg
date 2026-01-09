@@ -2,14 +2,22 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="489.36" height="694.56" viewBox="0.00 0.00 2039.00 2894.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g stroke-linecap="round" transform="translate(889.00, 482.00)" id="stand-stroke">
-<path d="M515.68,2320.21 L639.97,2319.57 L998.79,2110.99 L933.52,2003.78" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
-<path d="M91.80,2001.82 L155.84,2113.48 L515.89,2319.94 L576.10,2209.81" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
-<path d="M154.32,1477.22 L91.07,1586.02 L92.30,1999.99 L216.78,2001.34" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
-<path d="M635.32,1270.79 L511.03,1271.43 L152.21,1480.01 L217.48,1587.22" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
-<path d="M1059.20,1589.18 L995.16,1477.52 L635.11,1271.06 L574.90,1381.19" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
-<path d="M996.68,2113.78 L1059.93,2004.98 L1058.70,1591.01 L934.22,1589.66" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
-<path d="M441.86,1651.40 L706.22,1651.69" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="round"/>
-<path d="M443.59,1840.73 L705.64,1841.59" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="round"/>
-<path d="M573.46,1651.98 L574.33,1840.15" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M544.42,2289.10 L666.86,2289.45 L1008.17,2091.05 L946.08,1989.07" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+<path d="M544.42,2289.10 L666.86,2289.45 L1008.17,2091.05 L946.08,1989.07" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+<path d="M548.64,2290.06 L666.86,2289.45 L1008.17,2091.05 L946.08,1989.07" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+<path d="M145.45,1987.21 L206.37,2093.42 L548.84,2289.80 L606.11,2185.04" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+<path d="M145.45,1987.21 L206.37,2093.42 L548.84,2289.80 L606.11,2185.04" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+<path d="M145.45,1987.21 L206.37,2093.42 L548.84,2289.80 L606.11,2185.04" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+<path d="M204.92,1488.21 L144.76,1591.70 L145.92,1985.47 L264.33,1986.75" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+<path d="M666.66,1292.81 L544.22,1292.46 L202.91,1490.87 L265.00,1592.84" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+<path d="M666.66,1292.81 L544.22,1292.46 L202.91,1490.87 L265.00,1592.84" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+<path d="M662.45,1291.85 L544.22,1292.46 L202.91,1490.87 L265.00,1592.84" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+<path d="M1065.64,1594.70 L1004.72,1488.49 L662.24,1292.11 L604.97,1396.87" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+<path d="M1065.64,1594.70 L1004.72,1488.49 L662.24,1292.11 L604.97,1396.87" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+<path d="M1065.64,1594.70 L1004.72,1488.49 L662.24,1292.11 L604.97,1396.87" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+<path d="M1006.16,2093.70 L1066.33,1990.21 L1065.16,1596.45 L946.75,1595.16" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+<path d="M481.86,1639.40 L733.16,1639.69" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M480.59,1853.73 L733.68,1853.99" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M607.46,1639.98 L608.33,1852.71" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="round"/>
 </g>
 </svg>

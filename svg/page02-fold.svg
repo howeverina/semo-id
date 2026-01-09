@@ -2,17 +2,17 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="489.36" height="694.56" viewBox="0.00 0.00 2039.00 2894.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g stroke-linecap="round" id="fold">
-<path d="M1594.14,2323.46 L1330.97,2323.46 L1330.97,2133.82 L1594.14,2133.82 L1594.14,2323.46 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
-<path d="M1106.02,2484.73 L1106.80,2068.34 L1464.48,1864.12 L1821.36,2072.10 L1820.97,2486.30 L1466.31,2689.41 L1106.02,2484.73 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
-<path d="M980.95,2066.23 L1106.71,2067.75" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="round"/>
-<path d="M1401.05,1754.23 L1463.87,1862.32" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="round"/>
-<path d="M1822.55,2071.85 L1885.73,1960.94" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="round"/>
-<path d="M1823.61,2485.28 L1949.60,2487.03" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="round"/>
-<path d="M1467.73,2690.59 L1528.10,2800.09" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="round"/>
-<path d="M1045.81,2594.44 L1105.56,2485.37" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="round"/>
-<path d="M1253.91,241.83 L1656.68,241.35" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="round"/>
-<path d="M1219.32,454.58 L1252.49,240.41" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="round"/>
-<path d="M1656.21,241.35 L1690.80,457.90" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="round"/>
-<path d="M1219.04,456.11 L1692.11,456.68" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M1153.56,2470.07 L1154.30,2074.00 L1494.52,1879.75 L1833.98,2077.58 L1833.61,2471.57 L1496.26,2664.77 L1153.56,2470.07 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+<path d="M1034.59,2072.00 L1154.21,2073.44" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M1434.19,1775.23 L1493.94,1878.05" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M1835.12,2077.34 L1895.21,1971.85" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M1836.12,2470.59 L1955.96,2472.26" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M1497.62,2665.88 L1555.03,2770.04" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M1096.28,2574.43 L1153.12,2470.68" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M1370.71,2122.10 L1622.16,2122.10 L1622.16,2335.44 L1370.71,2335.44 L1370.71,2122.10 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+<path d="M1238.91,251.83 L1641.68,251.35" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M1204.32,464.58 L1237.49,250.41" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M1641.21,251.35 L1675.80,467.90" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M1204.04,466.11 L1677.11,466.68" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="round"/>
 </g>
 </svg>
