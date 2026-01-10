@@ -359,6 +359,8 @@
             <Svg :src="`/svg/shirt/${settings.shirt.code}-stroke.svg`" :stroke=settings.shirt.color :key="settings.shirt.code+settings.shirt.color" class="stroke"></Svg>
             <Svg :src="`/svg/pants/${settings.pants.code}-fill.svg`" :fill=settings.pants.color :key="settings.pants.code+settings.pants.color"></Svg>
             <Svg :src="`/svg/pants/${settings.pants.code}-stroke.svg`" :stroke=settings.pants.color :key="settings.pants.code+settings.pants.color" class="stroke"></Svg>
+            <Svg :src="`/svg/shoes/${settings.shoes.code}-fill.svg`" :fill=settings.shoes.color :key="settings.shoes.code+settings.shoes.color"></Svg>
+            <Svg :src="`/svg/shoes/${settings.shoes.code}-stroke.svg`" :stroke=settings.shoes.color :key="settings.shoes.code+settings.shoes.color" class="stroke"></Svg>
             <Svg src="/svg/page01-cut.svg" stroke="#55339977"></Svg>
             <Svg src="/svg/page01-fold.svg" stroke="#55339933"></Svg>
         </div></div>
@@ -371,6 +373,8 @@
             <Svg :src="`/svg/shirt/${settings.shirt.code}-preview-stroke.svg`" :stroke=settings.shirt.color :key="settings.shirt.code+settings.shirt.color" class="stroke"></Svg>
             <Svg :src="`/svg/pants/${settings.pants.code}-preview-fill.svg`" :fill=settings.pants.color :key="settings.pants.code+settings.pants.color"></Svg>
             <Svg :src="`/svg/pants/${settings.pants.code}-preview-stroke.svg`" :stroke=settings.pants.color :key="settings.pants.code+settings.pants.color" class="stroke"></Svg>
+            <Svg :src="`/svg/shoes/${settings.shoes.code}-preview-fill.svg`" :fill=settings.shoes.color :key="settings.shoes.code+settings.shoes.color"></Svg>
+            <Svg :src="`/svg/shoes/${settings.shoes.code}-preview-stroke.svg`" :stroke=settings.shoes.color :key="settings.shoes.code+settings.shoes.color" class="stroke"></Svg>
             <Svg :src="`/svg/skin/${settings.skin.code}-preview-face.svg`" :fill=settings.skin.color :key="settings.skin.code+settings.skin.color"></Svg>
             <Svg :src="`/svg/face/${settings.face.code}-preview-face.svg`" :fill=settings.face.color :key="settings.face.code+settings.face.color"></Svg>
             <Svg :src="`/svg/eyebrows/${settings.eyebrows.code}-preview-fill.svg`" :fill=settings.eyebrows.color :key="settings.eyebrows.code+settings.eyebrows.color"></Svg>
@@ -461,13 +465,13 @@
             types: ['없음', '짧은 옆머리', '긴 옆머리']
         }, add01: {
             require: false,
-            types: ['없음', '짧은 묶음머리']
+            types: ['없음', '짧은 묶음머리', '나뭇잎 머리']
         }, add02: {
             require: false,
-            types: ['없음', '짧은 묶음머리']
+            types: ['없음', '짧은 묶음머리', '나뭇잎 머리']
         }, add03: {
             require: false,
-            types: ['없음', '짧은 묶음머리']
+            types: ['없음', '짧은 묶음머리', '나뭇잎 머리']
         }, shirt: {
             require: true,
             types: ['없음', '교복 셔츠']
@@ -485,7 +489,7 @@
             types: ['없음']
         }, shoes: {
             require: false,
-            types: ['없음']
+            types: ['없음', '기본 운동화']
         }, stand: {
             require: true,
             types: ['없음', '기본 스탠드']
@@ -506,12 +510,12 @@
             color: '#ff5e8e'
         }, lefteye: {
             code: '01',
-            color: '#ff5e8e',
+            color: '#49e9e6',
             contrast: '#ffffff' // 흰자
         }, righteye: {
             code: '01',
-            color: '#ff5e8e',
-            contrast: '#000000' // 동공
+            color: '#49e9e6',
+            contrast: '#2b4ea1' // 동공
         }, mouth: {
             code: '01',
             color: '#ff9ead'
@@ -532,7 +536,7 @@
             code: '01',
             color: ''
         }, add01: {
-            code: '00',
+            code: '02',
             color: '#ff5e8e'
         }, add02: {
             code: '00',
@@ -545,7 +549,7 @@
             color: '#ffffff'
         }, pants: {
             code: '01',
-            color: '#ff5e8e'
+            color: '#ffccdb'
         }, skirt: {
             code: '01',
             color: '#ff5e8e'
@@ -556,7 +560,7 @@
             code: '00',
             color: '#ffffff'
         }, shoes: {
-            code: '00',
+            code: '01',
             color: '#ff5e8e'
         }, stand: {
             code: '01',
