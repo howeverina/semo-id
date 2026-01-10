@@ -584,7 +584,7 @@
     if (process.client) {
         try {
             const targetWidth = 2480
-            const targetHeight = 3472
+            const targetHeight = 3497
 
             const originalWidth1 = document.querySelector('#page1').offsetWidth
             const originalHeight1 = document.querySelector('#page1').offsetHeight
@@ -775,8 +775,8 @@ const saveAs = (uri, filename) => {
 
     #maker-wrapper .maker {
         position: relative;
-        aspect-ratio: 1 / 1.4;
-        max-height: 700px;
+        aspect-ratio: 1 / 1.41;
+        max-height: 705px;
         width: 100%;
         max-width: 500px;
     }
