@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="489.36" height="694.56" viewBox="0.00 0.00 2039.00 2894.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g stroke-linecap="round" transform="translate(122.00, -1403.00)" id="leftside-stroke">
-<path d="M10.09,1703.56 C10.09,1703.56 118.77,1724.25 118.77,1724.25 C86.72,1891.68 138.88,2128.19 207.40,2201.61 C207.40,2201.61 140.89,2177.07 140.89,2177.07 C140.89,2177.07 136.89,2221.92 136.89,2221.92 C59.67,2167.82 -23.01,1926.75 10.09,1703.56 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+<g stroke-linecap="round" id="leftside-stroke_02">
+<path d="M240.80,321.21 C240.80,321.21 131.76,301.50 131.76,301.50 C106.58,458.93 132.27,621.25 250.66,677.88 C231.37,561.20 216.72,448.42 240.80,321.21 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="round"/>
 </g>
 </svg>

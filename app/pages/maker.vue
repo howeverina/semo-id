@@ -19,8 +19,11 @@
                         <input class="colorinput" type="color" v-model="settings.skin.color"/>
                     </div>
                     <template v-for="(itemName, index) in items.skin.types" :key="index">
-                        <div v-if="!items.skin.require || index != 0" class="item" @click="updateCode('skin', index.toString().padStart(2, '0'))">
-                            {{ itemName }}
+                        <div v-if="(!items.skin.require || index != 0) && settings.skin.code==index.toString().padStart(2, '0')" class="item item-flex selected" @click="updateCode('skin', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
+                        </div>
+                        <div v-else-if="(!items.skin.require || index != 0)" class="item item-flex" @click="updateCode('skin', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
                         </div>
                     </template>
                 </div>
@@ -31,8 +34,11 @@
                         <input class="colorinput" type="color" v-model="settings.eyebrows.color"/>
                     </div>
                     <template v-for="(itemName, index) in items.eyebrows.types" :key="index">
-                        <div v-if="!items.eyebrows.require || index != 0" class="item" @click="updateCode('eyebrows', index.toString().padStart(2, '0'))">
-                            {{ itemName }}
+                        <div v-if="(!items.eyebrows.require || index != 0) && settings.eyebrows.code==index.toString().padStart(2, '0')" class="item item-flex selected" @click="updateCode('eyebrows', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
+                        </div>
+                        <div v-else-if="(!items.eyebrows.require || index != 0)" class="item item-flex" @click="updateCode('eyebrows', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
                         </div>
                     </template>
                 </div>
@@ -49,8 +55,11 @@
                         <input class="colorinput" type="color" v-model="settings.righteye.contrast"/>
                     </div>
                     <template v-for="(itemName, index) in items.lefteye.types" :key="index">
-                        <div v-if="!items.lefteye.require || index != 0" class="item" @click="updateCode('lefteye', index.toString().padStart(2, '0'))">
-                            {{ itemName }}
+                        <div v-if="(!items.lefteye.require || index != 0) && settings.lefteye.code==index.toString().padStart(2, '0')" class="item item-flex selected" @click="updateCode('lefteye', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
+                        </div>
+                        <div v-else-if="(!items.lefteye.require || index != 0)" class="item item-flex" @click="updateCode('lefteye', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
                         </div>
                     </template>
                 </div>
@@ -67,8 +76,11 @@
                         <input class="colorinput" type="color" v-model="settings.righteye.contrast"/>
                     </div>
                     <template v-for="(itemName, index) in items.righteye.types" :key="index">
-                        <div v-if="!items.righteye.require || index != 0" class="item" @click="updateCode('righteye', index.toString().padStart(2, '0'))">
-                            {{ itemName }}
+                        <div v-if="(!items.righteye.require || index != 0) && settings.righteye.code==index.toString().padStart(2, '0')" class="item item-flex selected" @click="updateCode('righteye', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
+                        </div>
+                        <div v-else-if="(!items.righteye.require || index != 0)" class="item item-flex" @click="updateCode('righteye', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
                         </div>
                     </template>
                 </div>
@@ -79,8 +91,11 @@
                         <input class="colorinput" type="color" v-model="settings.mouth.color"/>
                     </div>
                     <template v-for="(itemName, index) in items.mouth.types" :key="index">
-                        <div v-if="!items.mouth.require || index != 0" class="item" @click="updateCode('mouth', index.toString().padStart(2, '0'))">
-                            {{ itemName }}
+                        <div v-if="(!items.mouth.require || index != 0) && settings.mouth.code==index.toString().padStart(2, '0')" class="item item-flex selected" @click="updateCode('mouth', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
+                        </div>
+                        <div v-else-if="(!items.mouth.require || index != 0)" class="item item-flex" @click="updateCode('mouth', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
                         </div>
                     </template>
                 </div>
@@ -91,8 +106,11 @@
                         <input class="colorinput" type="color" v-model="settings.face.color"/>
                     </div>
                     <template v-for="(itemName, index) in items.face.types" :key="index">
-                        <div v-if="!items.face.require || index != 0" class="item" @click="updateCode('face', index.toString().padStart(2, '0'))">
-                            {{ itemName }}
+                        <div v-if="(!items.face.require || index != 0) && settings.face.code==index.toString().padStart(2, '0')" class="item item-flex selected" @click="updateCode('face', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
+                        </div>
+                        <div v-else-if="(!items.face.require || index != 0)" class="item item-flex" @click="updateCode('face', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
                         </div>
                     </template>
                 </div>
@@ -106,8 +124,11 @@
                         <input class="colorinput" type="color" v-model="settings.back.contrast"/>
                     </div>
                     <template v-for="(itemName, index) in items.back.types" :key="index">
-                        <div v-if="!items.back.require || index != 0" class="item" @click="updateCode('back', index.toString().padStart(2, '0'))">
-                            {{ itemName }}
+                        <div v-if="(!items.back.require || index != 0) && settings.back.code==index.toString().padStart(2, '0')" class="item item-flex selected" @click="updateCode('back', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
+                        </div>
+                        <div v-else-if="(!items.back.require || index != 0)" class="item item-flex" @click="updateCode('back', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
                         </div>
                     </template>
                 </div>
@@ -118,8 +139,11 @@
                         <input class="colorinput" type="color" v-model="settings.back.color"/>
                     </div>
                     <template v-for="(itemName, index) in items.bang.types" :key="index">
-                        <div v-if="!items.bang.require || index != 0" class="item" @click="updateCode('bang', index.toString().padStart(2, '0'))">
-                            {{ itemName }}
+                        <div v-if="(!items.bang.require || index != 0) && settings.bang.code==index.toString().padStart(2, '0')" class="item item-flex selected" @click="updateCode('bang', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
+                        </div>
+                        <div v-else-if="(!items.bang.require || index != 0)" class="item item-flex" @click="updateCode('bang', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
                         </div>
                     </template>
                 </div>
@@ -130,8 +154,11 @@
                         <input class="colorinput" type="color" v-model="settings.back.color"/>
                     </div>
                     <template v-for="(itemName, index) in items.leftside.types" :key="index">
-                        <div v-if="!items.leftside.require || index != 0" class="item" @click="updateCode('leftside', index.toString().padStart(2, '0'))">
-                            {{ itemName }}
+                        <div v-if="(!items.leftside.require || index != 0) && settings.leftside.code==index.toString().padStart(2, '0')" class="item item-flex selected" @click="updateCode('leftside', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
+                        </div>
+                        <div v-else-if="(!items.leftside.require || index != 0)" class="item item-flex" @click="updateCode('leftside', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
                         </div>
                     </template>
                 </div>
@@ -142,8 +169,11 @@
                         <input class="colorinput" type="color" v-model="settings.back.color"/>
                     </div>
                     <template v-for="(itemName, index) in items.rightside.types" :key="index">
-                        <div v-if="!items.rightside.require || index != 0" class="item" @click="updateCode('rightside', index.toString().padStart(2, '0'))">
-                            {{ itemName }}
+                        <div v-if="(!items.rightside.require || index != 0) && settings.rightside.code==index.toString().padStart(2, '0')" class="item item-flex selected" @click="updateCode('rightside', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
+                        </div>
+                        <div v-else-if="(!items.rightside.require || index != 0)" class="item item-flex" @click="updateCode('rightside', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
                         </div>
                     </template>
                 </div>
@@ -154,8 +184,11 @@
                         <input class="colorinput" type="color" v-model="settings.add01.color"/>
                     </div>
                     <template v-for="(itemName, index) in items.add01.types" :key="index">
-                        <div v-if="!items.add01.require || index != 0" class="item" @click="updateCode('add01', index.toString().padStart(2, '0'))">
-                            {{ itemName }}
+                        <div v-if="(!items.add01.require || index != 0) && settings.add01.code==index.toString().padStart(2, '0')" class="item item-flex selected" @click="updateCode('add01', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
+                        </div>
+                        <div v-else-if="(!items.add01.require || index != 0)" class="item item-flex" @click="updateCode('add01', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
                         </div>
                     </template>
                 </div>
@@ -166,8 +199,11 @@
                         <input class="colorinput" type="color" v-model="settings.add02.color"/>
                     </div>
                     <template v-for="(itemName, index) in items.add02.types" :key="index">
-                        <div v-if="!items.add02.require || index != 0" class="item" @click="updateCode('add02', index.toString().padStart(2, '0'))">
-                            {{ itemName }}
+                        <div v-if="(!items.add02.require || index != 0) && settings.add02.code==index.toString().padStart(2, '0')" class="item item-flex selected" @click="updateCode('add02', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
+                        </div>
+                        <div v-else-if="(!items.add02.require || index != 0)" class="item item-flex" @click="updateCode('add02', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
                         </div>
                     </template>
                 </div>
@@ -178,8 +214,11 @@
                         <input class="colorinput" type="color" v-model="settings.add03.color"/>
                     </div>
                     <template v-for="(itemName, index) in items.add03.types" :key="index">
-                        <div v-if="!items.add03.require || index != 0" class="item" @click="updateCode('add03', index.toString().padStart(2, '0'))">
-                            {{ itemName }}
+                        <div v-if="(!items.add03.require || index != 0) && settings.add03.code==index.toString().padStart(2, '0')" class="item item-flex selected" @click="updateCode('add03', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
+                        </div>
+                        <div v-else-if="(!items.add03.require || index != 0)" class="item item-flex" @click="updateCode('add03', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
                         </div>
                     </template>
                 </div>
@@ -190,8 +229,11 @@
                         <input class="colorinput" type="color" v-model="settings.shirt.color"/>
                     </div>
                     <template v-for="(itemName, index) in items.shirt.types" :key="index">
-                        <div v-if="!items.shirt.require || index != 0" class="item" @click="updateCode('shirt', index.toString().padStart(2, '0'))">
-                            {{ itemName }}
+                        <div v-if="(!items.shirt.require || index != 0) && settings.shirt.code==index.toString().padStart(2, '0')" class="item item-flex selected" @click="updateCode('shirt', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
+                        </div>
+                        <div v-else-if="(!items.shirt.require || index != 0)" class="item item-flex" @click="updateCode('shirt', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
                         </div>
                     </template>
                 </div>
@@ -202,8 +244,11 @@
                         <input class="colorinput" type="color" v-model="settings.pants.color"/>
                     </div>
                     <template v-for="(itemName, index) in items.pants.types" :key="index">
-                        <div v-if="!items.pants.require || index != 0" class="item" @click="updateCode('pants', index.toString().padStart(2, '0'))">
-                            {{ itemName }}
+                        <div v-if="(!items.pants.require || index != 0) && settings.pants.code==index.toString().padStart(2, '0')" class="item item-flex selected" @click="updateCode('pants', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
+                        </div>
+                        <div v-else-if="(!items.pants.require || index != 0)" class="item item-flex" @click="updateCode('pants', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
                         </div>
                     </template>
                 </div>
@@ -211,11 +256,14 @@
             <div v-if="activeTab === 15" class="content-item act">
                 <div class="item-grid">
                     <div class="item">
-                        <input class="colorinput" type="color" v-model="settings.outer.color"/>
+                        <input class="colorinput" type="color" v-model="settings.skirt.color"/>
                     </div>
-                    <template v-for="(itemName, index) in items.outer.types" :key="index">
-                        <div v-if="!items.outer.require || index != 0" class="item" @click="updateCode('outer', index.toString().padStart(2, '0'))">
-                            {{ itemName }}
+                    <template v-for="(itemName, index) in items.skirt.types" :key="index">
+                        <div v-if="(!items.skirt.require || index != 0) && settings.skirt.code==index.toString().padStart(2, '0')" class="item item-flex selected" @click="updateCode('skirt', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
+                        </div>
+                        <div v-else-if="(!items.skirt.require || index != 0)" class="item item-flex" @click="updateCode('skirt', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
                         </div>
                     </template>
                 </div>
@@ -223,11 +271,14 @@
             <div v-if="activeTab === 16" class="content-item act">
                 <div class="item-grid">
                     <div class="item">
-                        <input class="colorinput" type="color" v-model="settings.socks.color"/>
+                        <input class="colorinput" type="color" v-model="settings.outer.color"/>
                     </div>
-                    <template v-for="(itemName, index) in items.socks.types" :key="index">
-                        <div v-if="!items.socks.require || index != 0" class="item" @click="updateCode('socks', index.toString().padStart(2, '0'))">
-                            {{ itemName }}
+                    <template v-for="(itemName, index) in items.outer.types" :key="index">
+                        <div v-if="(!items.outer.require || index != 0) && settings.outer.code==index.toString().padStart(2, '0')" class="item item-flex selected" @click="updateCode('outer', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
+                        </div>
+                        <div v-else-if="(!items.outer.require || index != 0)" class="item item-flex" @click="updateCode('outer', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
                         </div>
                     </template>
                 </div>
@@ -235,16 +286,34 @@
             <div v-if="activeTab === 17" class="content-item act">
                 <div class="item-grid">
                     <div class="item">
-                        <input class="colorinput" type="color" v-model="settings.shoes.color"/>
+                        <input class="colorinput" type="color" v-model="settings.socks.color"/>
                     </div>
-                    <template v-for="(itemName, index) in items.shoes.types" :key="index">
-                        <div v-if="!items.shoes.require || index != 0" class="item" @click="updateCode('shoes', index.toString().padStart(2, '0'))">
-                            {{ itemName }}
+                    <template v-for="(itemName, index) in items.socks.types" :key="index">
+                        <div v-if="(!items.socks.require || index != 0) && settings.socks.code==index.toString().padStart(2, '0')" class="item item-flex selected" @click="updateCode('socks', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
+                        </div>
+                        <div v-else-if="(!items.socks.require || index != 0)" class="item item-flex" @click="updateCode('socks', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
                         </div>
                     </template>
                 </div>
             </div>
             <div v-if="activeTab === 18" class="content-item act">
+                <div class="item-grid">
+                    <div class="item">
+                        <input class="colorinput" type="color" v-model="settings.shoes.color"/>
+                    </div>
+                    <template v-for="(itemName, index) in items.shoes.types" :key="index">
+                        <div v-if="(!items.shoes.require || index != 0) && settings.shoes.code==index.toString().padStart(2, '0')" class="item item-flex selected" @click="updateCode('shoes', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
+                        </div>
+                        <div v-else-if="(!items.shoes.require || index != 0)" class="item item-flex" @click="updateCode('shoes', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+            <div v-if="activeTab === 19" class="content-item act">
                 <div class="item-grid">
                     <div class="item">
                         <input class="colorinput" type="color" v-model="settings.stand.color"/>
@@ -253,8 +322,11 @@
                         <input class="colorinput" type="color" v-model="settings.stand.contrast"/>
                     </div>
                     <template v-for="(itemName, index) in items.stand.types" :key="index">
-                        <div v-if="!items.stand.require || index != 0" class="item" @click="updateCode('stand', index.toString().padStart(2, '0'))">
-                            {{ itemName }}
+                        <div v-if="(!items.stand.require || index != 0) && settings.stand.code==index.toString().padStart(2, '0')" class="item item-flex selected" @click="updateCode('stand', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
+                        </div>
+                        <div v-else-if="(!items.stand.require || index != 0)" class="item item-flex" @click="updateCode('stand', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
                         </div>
                     </template>
                 </div>
@@ -359,67 +431,67 @@
     const items = {
         skin: {
             require: true,
-            types: ['none', '기본']
+            types: ['없음', '기본']
         }, eyebrows: {
             require: false,
-            types: ['none', '기본']
+            types: ['없음', '기본']
         }, lefteye: {
             require: true,
-            types: ['none', '동그란 눈']
+            types: ['없음', '동그란 눈']
         }, righteye: {
             require: true,
-            types: ['none', '동그란 눈']
+            types: ['없음', '동그란 눈']
         }, mouth: {
             require: false,
-            types: ['none', '고양이 입', '일자 입', '시옷 입']
+            types: ['없음', '고양이 입', '일자 입', '시옷 입']
         }, face: {
             require: true,
-            types: ['none', '홍조']
+            types: ['없음', '홍조']
         }, back: {
             require: false,
-            types: ['none', '볼륨 단발']
+            types: ['없음', '볼륨 단발']
         }, bang: {
             require: true, 
-            types: ['none', '일자 앞머리', '짧은 앞머리']
+            types: ['없음', '일자 앞머리', '짧은 앞머리']
         }, leftside: {
             require: false, 
-            types: ['none', '짧은 옆머리', '긴 옆머리']
+            types: ['없음', '짧은 옆머리', '긴 옆머리']
         }, rightside: {
             require: false, 
-            types: ['none', '짧은 옆머리', '긴 옆머리']
+            types: ['없음', '짧은 옆머리', '긴 옆머리']
         }, add01: {
             require: false,
-            types: ['none', '짧은 묶음머리']
+            types: ['없음', '짧은 묶음머리']
         }, add02: {
             require: false,
-            types: ['none', '짧은 묶음머리']
+            types: ['없음', '짧은 묶음머리']
         }, add03: {
             require: false,
-            types: ['none', '짧은 묶음머리']
+            types: ['없음', '짧은 묶음머리']
         }, shirt: {
             require: true,
-            types: ['none', '교복 셔츠']
+            types: ['없음', '교복 셔츠']
         }, pants: {
             require: true,
-            types: ['none', '속옷만', '반바지']
+            types: ['없음', '없?음', '반바지']
         }, skirt: {
             require: false,
-            types: ['none', '교복 치마']
+            types: ['없음', '교복 치마']
         }, outer: {
             require: false,
-            types: ['none']
+            types: ['없음']
         }, socks: {
             require: false,
-            types: ['none']
+            types: ['없음']
         }, shoes: {
             require: false,
-            types: ['none']
+            types: ['없음']
         }, stand: {
             require: true,
-            types: ['none', '기본 스탠드']
+            types: ['없음', '기본 스탠드']
         }, bg: {
             require: true,
-            types: ['none', '단색 배경']
+            types: ['없음', '단색 배경']
         }
     }
 
@@ -478,13 +550,13 @@
             code: '01',
             color: '#ff5e8e'
         }, outer: {
-            code: '01',
+            code: '00',
             color: '#ff5e8e'
         }, socks: {
-            code: '01',
+            code: '00',
             color: '#ffffff'
         }, shoes: {
-            code: '01',
+            code: '00',
             color: '#ff5e8e'
         }, stand: {
             code: '01',
@@ -664,6 +736,19 @@ const saveAs = (uri, filename) => {
         border: 1px solid var(--line);
         position: relative;
         overflow: hidden;
+    }
+
+    .item-flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .selected {
+        font-weight: 700;
+        color: var(--accent);
+        border: 3px solid var(--accent) !important;
+        background-color: var(--accentbg);
     }
 
     #maker-wrapper {
