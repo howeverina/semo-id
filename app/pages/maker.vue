@@ -453,16 +453,16 @@
             types: ['없음', '홍조']
         }, back: {
             require: false,
-            types: ['없음', '볼륨 단발']
+            types: ['없음', '볼륨 단발', '장발']
         }, bang: {
             require: true, 
-            types: ['없음', '일자 앞머리', '짧은 앞머리']
+            types: ['없음', '일자 앞머리', '짧은 앞머리', '삐죽삐죽']
         }, leftside: {
             require: false, 
-            types: ['없음', '짧은 옆머리', '긴 옆머리']
+            types: ['없음', '짧은 옆머리', '긴 옆머리', '삐죽1']
         }, rightside: {
             require: false, 
-            types: ['없음', '짧은 옆머리', '긴 옆머리']
+            types: ['없음', '짧은 옆머리', '긴 옆머리', '삐죽1']
         }, add01: {
             require: false,
             types: ['없음', '짧은 묶음머리', '나뭇잎 머리']
