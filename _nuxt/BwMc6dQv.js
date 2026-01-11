@@ -1,1 +1,0 @@
-import{_ as t,x as l,y as n,z as e,Q as s,K as o}from"./qfnMbJRF.js";const d={},f={id:"all-wrapper"};function i(r,a){return n(),l(o,null,[a[0]||(a[0]=e("header",null,[e("h1",{id:"page-title"},"세모이드"),e("div",null,[e("a",{href:"/"},"소개")]),e("div",null,[e("a",{href:"/maker"},"메이커")])],-1)),e("div",f,[s(r.$slots,"default")])],64)}const u=t(d,[["render",i]]);export{u as default};
