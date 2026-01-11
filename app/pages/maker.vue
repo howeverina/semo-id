@@ -331,6 +331,25 @@
                     </template>
                 </div>
             </div>
+
+            <div v-if="activeTab === 20" class="content-item act">
+                <div class="item-grid">
+                    <div class="item">
+                        <input class="colorinput" type="color" v-model="settings.bg.color"/>
+                    </div>
+                    <div class="item">
+                        <input class="colorinput" type="color" v-model="settings.bg.contrast"/>
+                    </div>
+                    <template v-for="(itemName, index) in items.bg.types" :key="index">
+                        <div v-if="(!items.bg.require || index != 0) && settings.bg.code==index.toString().padStart(2, '0')" class="item item-flex selected" @click="updateCode('bg', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
+                        </div>
+                        <div v-else-if="(!items.bg.require || index != 0)" class="item item-flex" @click="updateCode('bg', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
+                        </div>
+                    </template>
+                </div>
+            </div>
         </div>
     </div>
     <div id="maker-wrapper">
@@ -340,6 +359,7 @@
                 <div style="font-family: '116Subakhwa';">세모이드</div>
                 <input v-model="characterName" />
             </div>
+            <Svg src="/svg/bg-fill.svg" :fill=settings.bg.color key=settings.bg.color></Svg>
             <Svg :src="`/svg/skin/${settings.skin.code}-fill.svg`" :fill=settings.skin.color :key="settings.skin.code+settings.skin.color"></Svg>
             <Svg :src="`/svg/face/${settings.face.code}-fill.svg`" :fill=settings.face.color :key="settings.face.code+settings.face.color"></Svg>
             <Svg :src="`/svg/eyebrows/${settings.eyebrows.code}-fill.svg`" :fill=settings.eyebrows.color :key="settings.eyebrows.code+settings.eyebrows.color"></Svg>
@@ -366,6 +386,7 @@
         </div></div>
         <div class="maker-second-wrapper" id="page2" ref="img02">
         <div id="maker2" class="maker">
+            <Svg src="/svg/bg-fill.svg" :fill=settings.bg.color key=settings.bg.color></Svg>
             <Svg :src="`/svg/back/${settings.back.code}-preview-fill.svg`" :fill=settings.back.color :key="settings.back.code+settings.back.color"></Svg>
             <Svg :src="`/svg/skin/${settings.skin.code}-preview-fill.svg`" :fill=settings.skin.color :key="settings.skin.code+settings.skin.color"></Svg>
             <Svg :src="`/svg/face/${settings.face.code}-preview-fill.svg`" :fill=settings.face.color :key="settings.face.code+settings.face.color"></Svg>
@@ -431,7 +452,7 @@
 
     const activeTab = ref(0) 
 
-    const tabNames = ['피부', '눈썹', '왼눈', '오른눈', '입', '홍조', '뒷머리', '앞머리', '옆머리L', '옆머리R', '머리+', '머리+', '머리+', '상의', '하의', '스커트', '겉옷', '양말', '신발', '스탠드']
+    const tabNames = ['피부', '눈썹', '왼눈', '오른눈', '입', '홍조', '뒷머리', '앞머리', '옆머리L', '옆머리R', '머리+', '머리+', '머리+', '상의', '하의', '스커트', '겉옷', '양말', '신발', '스탠드', '배경']
     const items = {
         skin: {
             require: true,
@@ -447,7 +468,7 @@
             types: ['없음', '동그란 눈']
         }, mouth: {
             require: false,
-            types: ['없음', '고양이 입', '일자 입', '시옷 입']
+            types: ['없음', '고양이 입', '일자 입', '시옷 입', '웃는 입']
         }, face: {
             require: true,
             types: ['없음', '홍조']
@@ -568,7 +589,8 @@
             contrast: '#ffffff'
         }, bg: {
             code: '01',
-            color: '#c8edff'
+            color: '#ffe0e5',
+            contrast: '#ffffff'
         }
     })
 
