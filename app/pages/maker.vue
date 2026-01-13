@@ -369,8 +369,8 @@
             <Svg :src="`/svg/eyebrows/${settings.eyebrows.code}-stroke.svg`" :stroke=settings.eyebrows.color :key="settings.eyebrows.code+settings.eyebrows.color" class="stroke"></Svg>
             <Svg :src="`/svg/lefteye/${settings.lefteye.code}-contrast.svg`" :fill=settings.lefteye.contrast :key="settings.lefteye.code+settings.lefteye.contrast"></Svg>
             <Svg :src="`/svg/righteye/${settings.righteye.code}-contrast.svg`" :fill=settings.lefteye.contrast :key="settings.righteye.code+settings.lefteye.contrast"></Svg>
-            <Svg :src="`/svg/lefteye/${settings.lefteye.code}-fill.svg`" :fill=settings.lefteye.color :key="settings.lefteye.code+settings.lefteye.color"></Svg>
-            <Svg :src="`/svg/righteye/${settings.righteye.code}-fill.svg`" :fill=settings.righteye.color :key="settings.righteye.code+settings.righteye.color"></Svg>
+            <Svg :src="`/svg/lefteye/01-fill.svg`" :fill=settings.lefteye.color :key=settings.lefteye.color></Svg>
+            <Svg :src="`/svg/righteye/01-fill.svg`" :fill=settings.righteye.color :key=settings.righteye.color></Svg>
             <Svg src="/svg/pupil-fill.svg" :fill=settings.righteye.contrast :key=settings.righteye.contrast></Svg>
             <Svg src="/svg/highlight-fill.svg" fill="#ffffff"></Svg>
             <Svg :src="`/svg/lefteye/${settings.lefteye.code}-stroke.svg`" stroke="#000" :key=settings.lefteye.code></Svg>
@@ -392,6 +392,7 @@
             <Svg src="/svg/bg-fill.svg" :fill=settings.bg.color key=settings.bg.color></Svg>
             <Svg :src="`/svg/back/${settings.back.code}-preview-fill.svg`" :fill=settings.back.color :key="settings.back.code+settings.back.color"></Svg>
             <Svgrad :src="`/svg/back/${settings.back.code}-preview-fill.svg`" :fill=settings.back.grad :key="settings.back.code+settings.back.grad" from="50%" to="100%" id="bang"></Svgrad>
+            <Svg :src="`/svg/back/00-preview-fill.svg`" :fill=settings.back.color :key="settings.back.color"></Svg>
             <Svg :src="`/svg/skin/${settings.skin.code}-preview-fill.svg`" :fill=settings.skin.color :key="settings.skin.code+settings.skin.color"></Svg>
             <Svg :src="`/svg/face/${settings.face.code}-preview-fill.svg`" :fill=settings.face.color :key="settings.face.code+settings.face.color"></Svg>
             <Svg :src="`/svg/shirt/${settings.shirt.code}-preview-fill.svg`" :fill=settings.shirt.color :key="settings.shirt.code+settings.shirt.color"></Svg>
@@ -406,8 +407,8 @@
             <Svg :src="`/svg/eyebrows/${settings.eyebrows.code}-preview-stroke.svg`" :stroke=settings.eyebrows.color :key="settings.eyebrows.code+settings.eyebrows.color" class="stroke"></Svg>
             <Svg :src="`/svg/lefteye/${settings.lefteye.code}-preview-contrast.svg`" :fill=settings.lefteye.contrast :key="settings.lefteye.code+settings.lefteye.contrast"></Svg>
             <Svg :src="`/svg/righteye/${settings.righteye.code}-preview-contrast.svg`" :fill=settings.lefteye.contrast :key="settings.righteye.code+settings.lefteye.contrast"></Svg>
-            <Svg :src="`/svg/lefteye/${settings.lefteye.code}-preview-fill.svg`" :fill=settings.lefteye.color :key="settings.lefteye.code+settings.lefteye.color"></Svg>
-            <Svg :src="`/svg/righteye/${settings.righteye.code}-preview-fill.svg`" :fill=settings.righteye.color :key="settings.righteye.code+settings.righteye.color"></Svg>
+            <Svg :src="`/svg/lefteye/01-preview-fill.svg`" :fill=settings.lefteye.color :key=settings.lefteye.color></Svg>
+            <Svg :src="`/svg/righteye/01-preview-fill.svg`" :fill=settings.righteye.color :key=settings.righteye.color></Svg>
             <Svg src="/svg/pupil-preview-fill.svg" :fill=settings.righteye.contrast :key=settings.righteye.contrast></Svg>
             <Svg src="/svg/highlight-preview-fill.svg" fill="#ffffff"></Svg>
             <Svg :src="`/svg/lefteye/${settings.lefteye.code}-preview-stroke.svg`" stroke="#000" :key=settings.lefteye.code></Svg>
@@ -471,10 +472,10 @@
             types: ['없음', '기본']
         }, lefteye: {
             require: true,
-            types: ['없음', '동그란 눈']
+            types: ['없음', '동그란 눈', '올라간 눈']
         }, righteye: {
             require: true,
-            types: ['없음', '동그란 눈']
+            types: ['없음', '동그란 눈', '올라간 눈']
         }, mouth: {
             require: false,
             types: ['없음', '고양이 입', '일자 입', '시옷 입', '웃는 입']
@@ -495,13 +496,13 @@
             types: ['없음', '짧은 옆머리', '긴 옆머리', '삐죽1', '얇고 긴']
         }, add01: {
             require: false,
-            types: ['없음', '짧은 묶음머리', '나뭇잎 머리', '리본1', '얇고 긴']
+            types: ['없음', '짧은 묶음머리', '나뭇잎 머리', '리본1', '얇고 긴', '트윈테일']
         }, add02: {
             require: false,
-            types: ['없음', '짧은 묶음머리', '나뭇잎 머리', '리본1', '얇고 긴']
+            types: ['없음', '짧은 묶음머리', '나뭇잎 머리', '리본1', '얇고 긴', '트윈테일']
         }, add03: {
             require: false,
-            types: ['없음', '짧은 묶음머리', '나뭇잎 머리', '리본1', '얇고 긴']
+            types: ['없음', '짧은 묶음머리', '나뭇잎 머리', '리본1', '얇고 긴', '트윈테일']
         }, shirt: {
             require: true,
             types: ['없음', '교복 셔츠']
