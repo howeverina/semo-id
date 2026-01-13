@@ -123,6 +123,9 @@
                     <div class="item">
                         <input class="colorinput" type="color" v-model="settings.back.contrast"/>
                     </div>
+                    <div class="item">
+                        <input class="colorinput" type="color" v-model="settings.back.grad"/>
+                    </div>
                     <template v-for="(itemName, index) in items.back.types" :key="index">
                         <div v-if="(!items.back.require || index != 0) && settings.back.code==index.toString().padStart(2, '0')" class="item item-flex selected" @click="updateCode('back', index.toString().padStart(2, '0'))">
                             <div>{{ itemName }}</div>
@@ -388,6 +391,7 @@
         <div id="maker2" class="maker">
             <Svg src="/svg/bg-fill.svg" :fill=settings.bg.color key=settings.bg.color></Svg>
             <Svg :src="`/svg/back/${settings.back.code}-preview-fill.svg`" :fill=settings.back.color :key="settings.back.code+settings.back.color"></Svg>
+            <Svgrad :src="`/svg/back/${settings.back.code}-preview-fill.svg`" :fill=settings.back.grad :key="settings.back.code+settings.back.grad" from="50%" to="100%" id="bang"></Svgrad>
             <Svg :src="`/svg/skin/${settings.skin.code}-preview-fill.svg`" :fill=settings.skin.color :key="settings.skin.code+settings.skin.color"></Svg>
             <Svg :src="`/svg/face/${settings.face.code}-preview-fill.svg`" :fill=settings.face.color :key="settings.face.code+settings.face.color"></Svg>
             <Svg :src="`/svg/shirt/${settings.shirt.code}-preview-fill.svg`" :fill=settings.shirt.color :key="settings.shirt.code+settings.shirt.color"></Svg>
@@ -414,9 +418,14 @@
             <Svg :src="`/svg/rightside/${settings.rightside.code}-stroke.svg`" :fill=settings.back.color :key="settings.rightside.code+settings.back.color"></Svg>
             <Svg :src="`/svg/leftside/${settings.leftside.code}-stroke.svg`" :fill=settings.back.color :key="settings.leftside.code+settings.back.color"></Svg>
             <Svg :src="`/svg/rightside/${settings.rightside.code}-stroke.svg`" stroke="#55339977" :key=settings.rightside.code ></Svg>
+            <Svgrad :src="`/svg/rightside/${settings.rightside.code}-stroke.svg`" :fill=settings.back.grad :key="settings.rightside.code+settings.back.grad" from="50%" to="100%" id="bang"></Svgrad>
             <Svg :src="`/svg/leftside/${settings.leftside.code}-stroke.svg`" stroke="#55339977" :key=settings.leftside.code ></Svg>
+            <Svgrad :src="`/svg/leftside/${settings.leftside.code}-stroke.svg`" :fill=settings.back.grad :key="settings.leftside.code+settings.back.grad" from="50%" to="100%" id="bang"></Svgrad>
+            <Svgrad :src="`/svg/bang/${settings.bang.code}-stroke.svg`" :fill=settings.back.grad :key="settings.bang.code+settings.back.grad" from="50%" to="100%" id="bang"></Svgrad>
             <Svg :src="`/svg/bang/${settings.bang.code}-stroke.svg`" :fill=settings.back.color :key="settings.bang.code+settings.back.color"></Svg>
+            <Svgrad :src="`/svg/bang/${settings.bang.code}-stroke.svg`" :fill=settings.back.grad :key="settings.bang.code+settings.back.grad" from="50%" to="100%" id="bang"></Svgrad>
             <Svg :src="`/svg/back/${settings.back.code}-fill.svg`" :fill=settings.back.color :key="settings.back.code+settings.back.color"></Svg>
+            <Svgrad :src="`/svg/back/${settings.back.code}-fill.svg`" :fill=settings.back.grad :key="settings.back.code+settings.back.grad" from="10%" to="60%"></Svgrad>
             <Svg src="/svg/hairlight-fill.svg" :fill=settings.back.contrast :key=settings.back.contrast ></Svg>
             <Svg :src="`/svg/bang/${settings.bang.code}-stroke.svg`" stroke="#55339977" :key=settings.bang.code ></Svg>
             <Svg :src="`/svg/back/${settings.back.code}-stroke.svg`" stroke="#55339977" :key=settings.back.code ></Svg>
@@ -546,6 +555,7 @@
         }, back: {
             code: '00',
             color: '#ff5e8e',
+            grad: '#f43e75',
             contrast: '#ffadc2' // 하이라이트
         }, bang: {
             code: '01',
