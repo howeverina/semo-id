@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="489.36" height="694.56" viewBox="0.00 0.00 2039.00 2894.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g stroke-linecap="round" id="add-03-fill">
-<path d="M424.15,1539.10 L558.21,1394.55 L724.08,1379.46 L664.22,1600.20 L731.56,1825.31 L545.12,1803.49 L426.02,1670.60 L424.15,1539.10 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
-<path d="M498.85,1537.10 L364.79,1392.55 L198.92,1377.46 L258.78,1598.20 L191.44,1823.31 L377.88,1801.49 L496.98,1668.60 L498.85,1537.10 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+<g stroke-linecap="round" id="03-fill">
+<path d="M525.90,1638.85 L670.45,1504.79 L685.54,1338.92 L464.80,1398.78 L239.69,1331.44 L261.51,1517.88 L394.40,1636.98 L525.90,1638.85 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+<path d="M808.10,1638.85 L663.55,1504.79 L648.46,1338.92 L869.20,1398.78 L1094.31,1331.44 L1072.49,1517.88 L939.60,1636.98 L808.10,1638.85 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
 </g>
 </svg>
