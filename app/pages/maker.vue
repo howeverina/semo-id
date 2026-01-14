@@ -253,6 +253,21 @@
             <div v-if="activeTab === 14" class="content-item act">
                 <div class="item-grid">
                     <div class="item">
+                        <input class="colorinput" type="color" v-model="settings.sleeve.color"/>
+                    </div>
+                    <template v-for="(itemName, index) in items.sleeve.types" :key="index">
+                        <div v-if="(!items.sleeve.require || index != 0) && settings.sleeve.code==index.toString().padStart(2, '0')" class="item item-flex selected" @click="updateCode('sleeve', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
+                        </div>
+                        <div v-else-if="(!items.sleeve.require || index != 0)" class="item item-flex" @click="updateCode('sleeve', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+            <div v-if="activeTab === 15" class="content-item act">
+                <div class="item-grid">
+                    <div class="item">
                         <input class="colorinput" type="color" v-model="settings.pants.color"/>
                     </div>
                     <template v-for="(itemName, index) in items.pants.types" :key="index">
@@ -265,7 +280,7 @@
                     </template>
                 </div>
             </div>
-            <div v-if="activeTab === 15" class="content-item act">
+            <div v-if="activeTab === 16" class="content-item act">
                 <div class="item-grid">
                     <div class="item">
                         <input class="colorinput" type="color" v-model="settings.skirt.color"/>
@@ -280,7 +295,7 @@
                     </template>
                 </div>
             </div>
-            <div v-if="activeTab === 16" class="content-item act">
+            <div v-if="activeTab === 17" class="content-item act">
                 <div class="item-grid">
                     <div class="item">
                         <input class="colorinput" type="color" v-model="settings.outer.color"/>
@@ -295,7 +310,7 @@
                     </template>
                 </div>
             </div>
-            <div v-if="activeTab === 17" class="content-item act">
+            <div v-if="activeTab === 18" class="content-item act">
                 <div class="item-grid">
                     <div class="item">
                         <input class="colorinput" type="color" v-model="settings.socks.color"/>
@@ -310,7 +325,7 @@
                     </template>
                 </div>
             </div>
-            <div v-if="activeTab === 18" class="content-item act">
+            <div v-if="activeTab === 19" class="content-item act">
                 <div class="item-grid">
                     <div class="item">
                         <input class="colorinput" type="color" v-model="settings.shoes.color"/>
@@ -325,7 +340,7 @@
                     </template>
                 </div>
             </div>
-            <div v-if="activeTab === 19" class="content-item act">
+            <div v-if="activeTab === 20" class="content-item act">
                 <div class="item-grid">
                     <div class="item">
                         <input class="colorinput" type="color" v-model="settings.stand.color"/>
@@ -344,7 +359,7 @@
                 </div>
             </div>
 
-            <div v-if="activeTab === 20" class="content-item act">
+            <div v-if="activeTab === 21" class="content-item act">
                 <div class="item-grid">
                     <div class="item">
                         <input class="colorinput" type="color" v-model="settings.bg.color"/>
@@ -387,6 +402,8 @@
             <Svg :src="`/svg/mouth/${settings.mouth.code}-fill.svg`" :fill=settings.mouth.color :key="settings.mouth.code+settings.mouth.color"></Svg>
             <Svg :src="`/svg/mouth/${settings.mouth.code}-stroke.svg`" :stroke=settings.mouth.color :key="settings.mouth.code+settings.mouth.color" class="stroke"></Svg>
             <Svg src="/svg/hair-fill.svg" :fill=settings.back.color :key=settings.back.color ></Svg>
+            <Svg :src="`/svg/sleeve/${settings.sleeve.code}-fill.svg`" :fill=settings.sleeve.color :key="settings.sleeve.code+settings.sleeve.color"></Svg>
+            <Svg :src="`/svg/sleeve/${settings.sleeve.code}-stroke.svg`" :stroke=settings.sleeve.color :key="settings.sleeve.code+settings.sleeve.color" class="stroke"></Svg>
             <Svg :src="`/svg/shirt/${settings.shirt.code}-fill.svg`" :fill=settings.shirt.color :key="settings.shirt.code+settings.shirt.color"></Svg>
             <Svg :src="`/svg/shirt/${settings.shirt.code}-stroke.svg`" :stroke=settings.shirt.color :key="settings.shirt.code+settings.shirt.color" class="stroke"></Svg>
             <Svg :src="`/svg/pants/${settings.pants.code}-fill.svg`" :fill=settings.pants.color :key="settings.pants.code+settings.pants.color"></Svg>
@@ -404,6 +421,8 @@
             <Svg :src="`/svg/back/00-preview-fill.svg`" :fill=settings.back.color :key="settings.back.color"></Svg>
             <Svg :src="`/svg/skin/${settings.skin.code}-preview-fill.svg`" :fill=settings.skin.color :key="settings.skin.code+settings.skin.color"></Svg>
             <Svg :src="`/svg/face/${settings.face.code}-preview-fill.svg`" :fill=settings.face.color :key="settings.face.code+settings.face.color"></Svg>
+            <Svg :src="`/svg/sleeve/${settings.sleeve.code}-preview-fill.svg`" :fill=settings.sleeve.color :key="settings.sleeve.code+settings.sleeve.color"></Svg>
+            <Svg :src="`/svg/sleeve/${settings.sleeve.code}-preview-stroke.svg`" :stroke=settings.sleeve.color :key="settings.sleeve.code+settings.sleeve.color" class="stroke"></Svg>
             <Svg :src="`/svg/shirt/${settings.shirt.code}-preview-fill.svg`" :fill=settings.shirt.color :key="settings.shirt.code+settings.shirt.color"></Svg>
             <Svg :src="`/svg/shirt/${settings.shirt.code}-preview-stroke.svg`" :stroke=settings.shirt.color :key="settings.shirt.code+settings.shirt.color" class="stroke"></Svg>
             <Svg :src="`/svg/pants/${settings.pants.code}-preview-fill.svg`" :fill=settings.pants.color :key="settings.pants.code+settings.pants.color"></Svg>
@@ -474,7 +493,7 @@
 
     const activeTab = ref(0) 
 
-    const tabNames = ['피부', '눈썹', '왼눈', '오른눈', '입', '홍조', '뒷머리', '앞머리', '옆머리L', '옆머리R', '머리+', '머리+', '머리+', '상의', '하의', '스커트', '겉옷', '양말', '신발', '스탠드', '배경']
+    const tabNames = ['피부', '눈썹', '왼눈', '오른눈', '입', '홍조', '뒷머리', '앞머리', '옆머리L', '옆머리R', '머리+', '머리+', '머리+', '상의', '소매', '하의', '스커트', '겉옷', '양말', '신발', '스탠드', '배경']
     const items = {
         skin: {
             require: true,
@@ -518,6 +537,9 @@
         }, shirt: {
             require: true,
             types: ['없음', '교복 셔츠']
+        }, sleeve: {
+            require: false,
+            types: ['없음', '긴소매']
         }, pants: {
             require: true,
             types: ['없음', '없?음', '반바지']
@@ -592,6 +614,9 @@
             color: '#ff5e8e',
             grad: '#ff5e8e00'
         }, shirt: {
+            code: '01',
+            color: '#ffffff'
+        }, sleeve: {
             code: '01',
             color: '#ffffff'
         }, pants: {

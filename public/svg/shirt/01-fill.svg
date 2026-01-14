@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="489.36" height="694.56" viewBox="0.00 0.00 2039.00 2894.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g stroke-linecap="round" id="shirt-fill">
-<path d="M97.85,2131.96 L203.05,2115.08 L459.82,2116.32 L479.42,2006.25 L383.04,1882.88 L275.02,1883.33 L174.00,1989.41 L77.20,2007.78 L97.85,2131.96 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
+<g stroke-linecap="round" id="01-fill">
 <path d="M576.24,2246.82 L549.75,2247.14 L458.17,2533.70 L852.44,2535.79 L760.40,2245.91 L738.81,2245.29 L719.71,2268.18 L589.24,2267.56 L576.24,2246.82 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
-<path d="M1901.15,2720.96 L1795.95,2704.08 L1539.18,2705.32 L1519.58,2595.25 L1624.98,2472.71 L1727.04,2473.97 L1825.84,2578.46 L1921.80,2596.78 L1901.15,2720.96 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
 <path d="M1245.75,2020.15 L1159.79,1980.56 L1036.10,1886.73 L825.12,2090.66 L1076.23,2272.10 L1417.33,2273.92 L1669.34,2097.35 L1462.09,1891.11 L1334.96,1979.98 L1245.75,2020.15 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="miter"/>
 </g>
 </svg>
