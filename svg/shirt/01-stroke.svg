@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="489.36" height="694.56" viewBox="0.00 0.00 2039.00 2894.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g stroke-linecap="round" id="shirt-stroke">
-<path d="M99.94,2130.20 L205.07,2114.10" fill="none" stroke="rgb(0, 0, 0)" stroke-width="7.00" stroke-opacity="1.00" stroke-linejoin="round"/>
-<path d="M205.07,2114.10 L205.07,2114.10" fill="none" stroke="rgb(0, 0, 0)" stroke-width="7.00" stroke-opacity="1.00" stroke-linejoin="round"/>
-<path d="M204.12,2113.63 L204.12,2113.63" fill="none" stroke="rgb(0, 0, 0)" stroke-width="7.00" stroke-opacity="1.00" stroke-linejoin="round"/>
-<path d="M203.17,2113.63 L460.31,2114.10" fill="none" stroke="rgb(0, 0, 0)" stroke-width="7.00" stroke-opacity="1.00" stroke-linejoin="round"/>
-<path d="M197.17,2072.63 L467.98,2073.10" fill="none" stroke="rgb(0, 0, 0)" stroke-width="7.00" stroke-opacity="1.00" stroke-linejoin="round"/>
-<path d="M195.12,2073.03 L92.08,2090.43" fill="none" stroke="rgb(0, 0, 0)" stroke-width="7.00" stroke-opacity="1.00" stroke-linejoin="round"/>
-<path d="M1900.06,2721.20 L1794.93,2705.10" fill="none" stroke="rgb(0, 0, 0)" stroke-width="7.00" stroke-opacity="1.00" stroke-linejoin="round"/>
-<path d="M1794.93,2705.10 L1794.93,2705.10" fill="none" stroke="rgb(0, 0, 0)" stroke-width="7.00" stroke-opacity="1.00" stroke-linejoin="round"/>
-<path d="M1795.88,2704.63 L1795.88,2704.63" fill="none" stroke="rgb(0, 0, 0)" stroke-width="7.00" stroke-opacity="1.00" stroke-linejoin="round"/>
-<path d="M1796.83,2704.63 L1539.69,2705.10" fill="none" stroke="rgb(0, 0, 0)" stroke-width="7.00" stroke-opacity="1.00" stroke-linejoin="round"/>
-<path d="M1802.83,2663.63 L1532.02,2664.10" fill="none" stroke="rgb(0, 0, 0)" stroke-width="7.00" stroke-opacity="1.00" stroke-linejoin="round"/>
-<path d="M1804.88,2664.03 L1907.92,2681.43" fill="none" stroke="rgb(0, 0, 0)" stroke-width="7.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+<g stroke-linecap="round" id="01-stroke">
 <path d="M574.62,2252.89 L589.62,2267.19" fill="none" stroke="rgb(0, 0, 0)" stroke-width="7.00" stroke-opacity="1.00" stroke-linejoin="round"/>
 <path d="M589.96,2267.54 L721.77,2267.19" fill="none" stroke="rgb(0, 0, 0)" stroke-width="7.00" stroke-opacity="1.00" stroke-linejoin="round"/>
 <path d="M721.43,2266.84 L736.77,2250.10" fill="none" stroke="rgb(0, 0, 0)" stroke-width="7.00" stroke-opacity="1.00" stroke-linejoin="round"/>

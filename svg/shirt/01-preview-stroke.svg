@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="489.36" height="694.56" viewBox="0.00 0.00 2039.00 2894.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g stroke-linecap="round" transform="translate(-460.00, -1434.00)" id="shirt-preview-stroke">
+<g stroke-linecap="round" transform="translate(-460.00, -1434.00)" id="01-preview-stroke">
 <path d="M824.48,2070.52 L886.21,2096.98" fill="none" stroke="rgb(0, 0, 0)" stroke-width="7.00" stroke-opacity="1.00" stroke-linejoin="round"/>
 <path d="M799.29,2073.88 L848.84,2131.83" fill="none" stroke="rgb(0, 0, 0)" stroke-width="7.00" stroke-opacity="1.00" stroke-linejoin="round"/>
 <path d="M850.10,2133.93 L887.05,2098.66" fill="none" stroke="rgb(0, 0, 0)" stroke-width="7.00" stroke-opacity="1.00" stroke-linejoin="round"/>
@@ -15,9 +15,5 @@
 <path d="M887.93,2110.44 C889.32,2110.26 892.55,2110.99 893.68,2111.75 C894.79,2112.54 896.48,2115.22 896.69,2116.51 C896.86,2117.82 896.02,2120.87 895.20,2121.95 C894.33,2123.00 891.45,2124.64 890.07,2124.87 C888.68,2125.05 885.45,2124.32 884.31,2123.56 C883.21,2122.77 881.52,2120.09 881.30,2118.80 C881.13,2117.49 881.98,2114.44 882.80,2113.36 C883.67,2112.31 886.54,2110.67 887.93,2110.44 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="7.00" stroke-opacity="1.00" stroke-linejoin="round"/>
 <path d="M888.76,2183.77 C890.07,2183.79 892.97,2184.93 893.91,2185.80 C894.83,2186.70 896.02,2189.45 896.05,2190.70 C896.02,2191.95 894.83,2194.70 893.91,2195.60 C892.97,2196.47 890.07,2197.61 888.76,2197.63 C887.44,2197.61 884.54,2196.47 883.60,2195.60 C882.68,2194.70 881.49,2191.95 881.46,2190.70 C881.49,2189.45 882.68,2186.70 883.60,2185.80 C884.54,2184.93 887.44,2183.79 888.76,2183.77 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="7.00" stroke-opacity="1.00" stroke-linejoin="round"/>
 <path d="M888.88,2257.18 C890.13,2257.20 892.88,2258.32 893.78,2259.17 C894.64,2260.06 895.78,2262.76 895.80,2263.99 C895.78,2265.21 894.64,2267.92 893.78,2268.80 C892.88,2269.65 890.13,2270.77 888.88,2270.79 C887.63,2270.77 884.88,2269.65 883.98,2268.80 C883.11,2267.92 881.97,2265.21 881.95,2263.99 C881.97,2262.76 883.11,2260.06 883.98,2259.17 C884.88,2258.32 887.63,2257.20 888.88,2257.18 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="7.00" stroke-opacity="1.00" stroke-linejoin="round"/>
-<path d="M593.74,2200.79 L623.30,2265.80" fill="none" stroke="rgb(0, 0, 0)" stroke-width="7.00" stroke-opacity="1.00" stroke-linejoin="round"/>
-<path d="M620.78,2187.43 L653.10,2256.61" fill="none" stroke="rgb(0, 0, 0)" stroke-width="7.00" stroke-opacity="1.00" stroke-linejoin="round"/>
-<path d="M1153.22,2268.16 L1184.96,2201.02" fill="none" stroke="rgb(0, 0, 0)" stroke-width="7.00" stroke-opacity="1.00" stroke-linejoin="round"/>
-<path d="M1124.65,2257.06 L1157.67,2187.13" fill="none" stroke="rgb(0, 0, 0)" stroke-width="7.00" stroke-opacity="1.00" stroke-linejoin="round"/>
 </g>
 </svg>
