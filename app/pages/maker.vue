@@ -186,6 +186,9 @@
                     <div class="item">
                         <input class="colorinput" type="color" v-model="settings.add01.color"/>
                     </div>
+                    <div class="item">
+                        <input class="colorinput" type="color" v-model="settings.add01.grad"/>
+                    </div>
                     <template v-for="(itemName, index) in items.add01.types" :key="index">
                         <div v-if="(!items.add01.require || index != 0) && settings.add01.code==index.toString().padStart(2, '0')" class="item item-flex selected" @click="updateCode('add01', index.toString().padStart(2, '0'))">
                             <div>{{ itemName }}</div>
@@ -201,6 +204,9 @@
                     <div class="item">
                         <input class="colorinput" type="color" v-model="settings.add02.color"/>
                     </div>
+                    <div class="item">
+                        <input class="colorinput" type="color" v-model="settings.add02.grad"/>
+                    </div>
                     <template v-for="(itemName, index) in items.add02.types" :key="index">
                         <div v-if="(!items.add02.require || index != 0) && settings.add02.code==index.toString().padStart(2, '0')" class="item item-flex selected" @click="updateCode('add02', index.toString().padStart(2, '0'))">
                             <div>{{ itemName }}</div>
@@ -215,6 +221,9 @@
                 <div class="item-grid">
                     <div class="item">
                         <input class="colorinput" type="color" v-model="settings.add03.color"/>
+                    </div>
+                    <div class="item">
+                        <input class="colorinput" type="color" v-model="settings.add03.grad"/>
                     </div>
                     <template v-for="(itemName, index) in items.add03.types" :key="index">
                         <div v-if="(!items.add03.require || index != 0) && settings.add03.code==index.toString().padStart(2, '0')" class="item item-flex selected" @click="updateCode('add03', index.toString().padStart(2, '0'))">
@@ -426,7 +435,7 @@
             <Svg :src="`/svg/bang/${settings.bang.code}-stroke.svg`" :fill=settings.back.color :key="settings.bang.code+settings.back.color"></Svg>
             <Svgrad :src="`/svg/bang/${settings.bang.code}-stroke.svg`" :fill=settings.back.grad :key="settings.bang.code+settings.back.grad" from="50%" to="100%" id="bang"></Svgrad>
             <Svg :src="`/svg/back/${settings.back.code}-fill.svg`" :fill=settings.back.color :key="settings.back.code+settings.back.color"></Svg>
-            <Svgrad :src="`/svg/back/${settings.back.code}-fill.svg`" :fill=settings.back.grad :key="settings.back.code+settings.back.grad" from="10%" to="60%"></Svgrad>
+            <Svgrad v-if="settings.back.code!='00'" :src="`/svg/back/${settings.back.code}-fill.svg`" :fill=settings.back.grad :key="settings.back.code+settings.back.grad" from="10%" to="65%"></Svgrad>
             <Svg src="/svg/hairlight-fill.svg" :fill=settings.back.contrast :key=settings.back.contrast ></Svg>
             <Svg :src="`/svg/bang/${settings.bang.code}-stroke.svg`" stroke="#55339977" :key=settings.bang.code ></Svg>
             <Svg :src="`/svg/back/${settings.back.code}-stroke.svg`" stroke="#55339977" :key=settings.back.code ></Svg>
@@ -440,14 +449,17 @@
             <Svg src="/svg/page02-fold.svg" stroke="#55339933"></Svg>
             <div style="position: relative; top: 0; left: 0;" id="add01">
                 <Svg :src="`/svg/add/${settings.add01.code}-fill.svg`" :fill=settings.add01.color :key="settings.add01.code+settings.add01.color"></Svg>
+                <Svgrad :src="`/svg/add/${settings.add01.code}-fill.svg`" :fill=settings.add01.grad :key="settings.add01.code+settings.add01.grad" id="add01"></Svgrad>
                 <Svg :src="`/svg/add/${settings.add01.code}-stroke.svg`" stroke="#55339977" :key=settings.add01.code></Svg>
             </div>
             <div style="position: relative; top: 0; left: 0;" id="add02">
                 <Svg :src="`/svg/add/${settings.add02.code}-fill.svg`" :fill=settings.add02.color :key="settings.add02.code+settings.add02.color"></Svg>
+                <Svgrad :src="`/svg/add/${settings.add02.code}-fill.svg`" :fill=settings.add02.grad :key="settings.add02.code+settings.add02.grad" id="add02"></Svgrad>
                 <Svg :src="`/svg/add/${settings.add02.code}-stroke.svg`" stroke="#55339977" :key=settings.add02.code></Svg>
             </div>
             <div style="position: relative; top: 0; left: 0;" id="add03">
                 <Svg :src="`/svg/add/${settings.add03.code}-fill.svg`" :fill=settings.add03.color :key="settings.add02.code+settings.add03.color"></Svg>
+                <Svgrad :src="`/svg/add/${settings.add03.code}-fill.svg`" :fill=settings.add03.grad :key="settings.add03.code+settings.add03.grad" id="add03"></Svgrad>
                 <Svg :src="`/svg/add/${settings.add03.code}-stroke.svg`" stroke="#55339977" :key=settings.add03.code></Svg>
             </div>
         </div></div>
@@ -556,7 +568,7 @@
         }, back: {
             code: '00',
             color: '#ff5e8e',
-            grad: '#f43e75',
+            grad: '#ff5e8e00',
             contrast: '#ffadc2' // 하이라이트
         }, bang: {
             code: '01',
@@ -569,13 +581,16 @@
             color: ''
         }, add01: {
             code: '02',
-            color: '#ff5e8e'
+            color: '#ff5e8e',
+            grad: '#ff5e8e00'
         }, add02: {
             code: '00',
-            color: '#ff5e8e'
+            color: '#ff5e8e',
+            grad: '#ff5e8e00'
         }, add03: {
             code: '00',
-            color: '#ff5e8e'
+            color: '#ff5e8e',
+            grad: '#ff5e8e00'
         }, shirt: {
             code: '01',
             color: '#ffffff'

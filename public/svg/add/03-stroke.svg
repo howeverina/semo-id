@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="489.36" height="694.56" viewBox="0.00 0.00 2039.00 2894.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g stroke-linecap="round" id="add-03-stroke">
-<path d="M350.39,1604.74 C300.36,1572.45 240.19,1498.86 240.36,1410.95 C345.87,1410.88 429.42,1507.64 463.89,1591.51 C463.89,1591.51 464.11,1618.49 464.11,1618.49 C430.68,1717.72 332.01,1786.41 238.49,1786.77 C235.80,1716.49 296.94,1639.95 350.39,1604.74 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="round"/>
+<g stroke-linecap="round" id="03-stroke">
+<path d="M458.26,1490.39 C490.55,1440.36 564.14,1380.19 652.05,1380.36 C652.12,1485.87 555.36,1569.42 471.49,1603.89 C471.49,1603.89 444.51,1604.11 444.51,1604.11 C345.28,1570.68 276.59,1472.01 276.23,1378.49 C346.51,1375.80 423.05,1436.94 458.26,1490.39 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="4.00" stroke-opacity="1.00" stroke-linejoin="round"/>
 </g>
 </svg>
