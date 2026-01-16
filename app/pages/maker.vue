@@ -285,6 +285,9 @@
                     <div class="item">
                         <input class="colorinput" type="color" v-model="settings.skirt.color"/>
                     </div>
+                    <div class="item">
+                        <input class="colorinput" type="color" v-model="settings.skirt.contrast"/>
+                    </div>
                     <template v-for="(itemName, index) in items.skirt.types" :key="index">
                         <div v-if="(!items.skirt.require || index != 0) && settings.skirt.code==index.toString().padStart(2, '0')" class="item item-flex selected" @click="updateCode('skirt', index.toString().padStart(2, '0'))">
                             <div>{{ itemName }}</div>
@@ -296,6 +299,21 @@
                 </div>
             </div>
             <div v-if="activeTab === 17" class="content-item act">
+                <div class="item-grid">
+                    <div class="item">
+                        <input class="colorinput" type="color" v-model="settings.tie.color"/>
+                    </div>
+                    <template v-for="(itemName, index) in items.tie.types" :key="index">
+                        <div v-if="(!items.tie.require || index != 0) && settings.tie.code==index.toString().padStart(2, '0')" class="item item-flex selected" @click="updateCode('tie', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
+                        </div>
+                        <div v-else-if="(!items.tie.require || index != 0)" class="item item-flex" @click="updateCode('tie', index.toString().padStart(2, '0'))">
+                            <div>{{ itemName }}</div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+            <div v-if="activeTab === 18" class="content-item act">
                 <div class="item-grid">
                     <div class="item">
                         <input class="colorinput" type="color" v-model="settings.outer.color"/>
@@ -310,7 +328,7 @@
                     </template>
                 </div>
             </div>
-            <div v-if="activeTab === 18" class="content-item act">
+            <div v-if="activeTab === 19" class="content-item act">
                 <div class="item-grid">
                     <div class="item">
                         <input class="colorinput" type="color" v-model="settings.socks.color"/>
@@ -325,7 +343,7 @@
                     </template>
                 </div>
             </div>
-            <div v-if="activeTab === 19" class="content-item act">
+            <div v-if="activeTab === 20" class="content-item act">
                 <div class="item-grid">
                     <div class="item">
                         <input class="colorinput" type="color" v-model="settings.shoes.color"/>
@@ -340,7 +358,7 @@
                     </template>
                 </div>
             </div>
-            <div v-if="activeTab === 20" class="content-item act">
+            <div v-if="activeTab === 21" class="content-item act">
                 <div class="item-grid">
                     <div class="item">
                         <input class="colorinput" type="color" v-model="settings.stand.color"/>
@@ -359,7 +377,7 @@
                 </div>
             </div>
 
-            <div v-if="activeTab === 21" class="content-item act">
+            <div v-if="activeTab === 22" class="content-item act">
                 <div class="item-grid">
                     <div class="item">
                         <input class="colorinput" type="color" v-model="settings.bg.color"/>
@@ -408,6 +426,8 @@
             <Svg :src="`/svg/shirt/${settings.shirt.code}-stroke.svg`" :stroke=settings.shirt.color :key="settings.shirt.code+settings.shirt.color" class="stroke"></Svg>
             <Svg :src="`/svg/pants/${settings.pants.code}-fill.svg`" :fill=settings.pants.color :key="settings.pants.code+settings.pants.color"></Svg>
             <Svg :src="`/svg/pants/${settings.pants.code}-stroke.svg`" :stroke=settings.pants.color :key="settings.pants.code+settings.pants.color" class="stroke"></Svg>
+            <Svg v-if="settings.tie.code!='00'" :src="`/svg/tie/${settings.tie.code}-stroke.svg`" :fill=settings.tie.color :key="settings.tie.code+settings.tie.color"></Svg>
+            <Svg v-if="settings.tie.code!='00'" :src="`/svg/tie/${settings.tie.code}-stroke.svg`" :stroke=settings.tie.color :key="settings.tie.code+settings.tie.color" class="stroke"></Svg>
             <Svg :src="`/svg/shoes/${settings.shoes.code}-fill.svg`" :fill=settings.shoes.color :key="settings.shoes.code+settings.shoes.color"></Svg>
             <Svg :src="`/svg/shoes/${settings.shoes.code}-stroke.svg`" :stroke=settings.shoes.color :key="settings.shoes.code+settings.shoes.color" class="stroke"></Svg>
             <Svg src="/svg/page01-cut.svg" stroke="#55339977"></Svg>
@@ -427,6 +447,8 @@
             <Svg :src="`/svg/shirt/${settings.shirt.code}-preview-stroke.svg`" :stroke=settings.shirt.color :key="settings.shirt.code+settings.shirt.color" class="stroke"></Svg>
             <Svg :src="`/svg/pants/${settings.pants.code}-preview-fill.svg`" :fill=settings.pants.color :key="settings.pants.code+settings.pants.color"></Svg>
             <Svg :src="`/svg/pants/${settings.pants.code}-preview-stroke.svg`" :stroke=settings.pants.color :key="settings.pants.code+settings.pants.color" class="stroke"></Svg>
+            <Svg v-if="settings.tie.code!='00'" :src="`/svg/tie/${settings.tie.code}-preview-stroke.svg`" :fill=settings.tie.color :key="settings.tie.code+settings.tie.color"></Svg>
+            <Svg v-if="settings.tie.code!='00'" :src="`/svg/tie/${settings.tie.code}-preview-stroke.svg`" :stroke=settings.tie.color :key="settings.tie.code+settings.tie.color" class="stroke"></Svg>
             <Svg :src="`/svg/shoes/${settings.shoes.code}-preview-fill.svg`" :fill=settings.shoes.color :key="settings.shoes.code+settings.shoes.color"></Svg>
             <Svg :src="`/svg/shoes/${settings.shoes.code}-preview-stroke.svg`" :stroke=settings.shoes.color :key="settings.shoes.code+settings.shoes.color" class="stroke"></Svg>
             <Svg :src="`/svg/skin/${settings.skin.code}-preview-face.svg`" :fill=settings.skin.color :key="settings.skin.code+settings.skin.color"></Svg>
@@ -462,9 +484,10 @@
             <Svg src="/svg/stand-contrast.svg" :stroke=settings.stand.contrast :key=settings.stand.contrast ></Svg>
             <Svg src="/svg/stand-stroke.svg" stroke="#55339977" ></Svg>
             <Svg :src="`/svg/skirt/${settings.skirt.code}-fill.svg`" :fill=settings.skirt.color :key="settings.skirt.code+settings.skirt.color" ></Svg>
+            <Svg :src="`/svg/skirt/${settings.skirt.code}-contrast.svg`" :fill=settings.skirt.contrast :stroke=settings.skirt.contrast :key="settings.skirt.code+settings.skirt.contrast" ></Svg>
             <Svg :src="`/svg/skirt/${settings.skirt.code}-stroke.svg`" :stroke=settings.skirt.color :key="settings.skirt.code+settings.skirt.color" class="stroke"></Svg>
-            <Svg :src="`/svg/skirt/${settings.skirt.code}-fold.svg`" stroke="#55339933" :key=settings.skirt.code ></Svg>
-            <Svg :src="`/svg/skirt/${settings.skirt.code}-cut.svg`" stroke="#55339977" :key=settings.skirt.code ></Svg>
+            <Svg v-if="settings.skirt.code!='00'" :src="`/svg/skirt/01-fold.svg`" stroke="#55339933" :key=settings.skirt.code ></Svg>
+            <Svg v-if="settings.skirt.code!='00'" :src="`/svg/skirt/01-cut.svg`" stroke="#55339977" :key=settings.skirt.code ></Svg>
             <Svg src="/svg/page02-fold.svg" stroke="#55339933"></Svg>
             <div style="position: relative; top: 0; left: 0;" id="add01">
                 <Svg :src="`/svg/add/${settings.add01.code}-fill.svg`" :fill=settings.add01.color :key="settings.add01.code+settings.add01.color"></Svg>
@@ -493,7 +516,7 @@
 
     const activeTab = ref(0) 
 
-    const tabNames = ['피부', '눈썹', '왼눈', '오른눈', '입', '홍조', '뒷머리', '앞머리', '옆머리L', '옆머리R', '머리+', '머리+', '머리+', '상의', '소매', '하의', '스커트', '겉옷', '양말', '신발', '스탠드', '배경']
+    const tabNames = ['피부', '눈썹', '왼눈', '오른눈', '입', '홍조', '뒷머리', '앞머리', '옆머리L', '옆머리R', '머리+', '머리+', '머리+', '상의', '소매', '하의', '스커트', '장식', '겉옷', '양말', '신발', '스탠드', '배경']
     const items = {
         skin: {
             require: true,
@@ -545,10 +568,13 @@
             types: ['없음', '없?음', '반바지']
         }, skirt: {
             require: false,
-            types: ['없음', '교복 치마']
+            types: ['없음', '교복 치마', '끝선 치마']
         }, outer: {
             require: false,
             types: ['없음']
+        }, tie: {
+            require: false,
+            types: ['없음', '넥타이']
         }, socks: {
             require: false,
             types: ['없음']
@@ -624,6 +650,10 @@
             color: '#ffccdb'
         }, skirt: {
             code: '01',
+            color: '#ff5e8e',
+            contrast: '#ff5e8e00'
+        }, tie: {
+            code: '00',
             color: '#ff5e8e'
         }, outer: {
             code: '00',
@@ -856,7 +886,7 @@ const saveAs = (uri, filename) => {
 
     #titleinput {
         position: absolute;
-        top: 0;
+        top: min(12vw, 120px);
         left: max(-7.5vw, -75px);
         z-index: 99;
         transform: rotate(270deg);
@@ -866,9 +896,11 @@ const saveAs = (uri, filename) => {
         font-size: min(1vw, 10px);
         margin-bottom: 0;
         padding-bottom: 0;
+        text-align: right;
     }
 
     #titleinput > input {
+        text-align: right;
         font-size: min(2.5vw, 25px);
         border: 0;
         height: min(3vw, 30px);
