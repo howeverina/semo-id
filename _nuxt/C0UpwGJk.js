@@ -1,1 +1,0 @@
-import{_ as l,x as r,z as e,y as t}from"./DLRHgyEo.js";const o={};function s(a,n){return t(),r("div",null,[...n[0]||(n[0]=[e("h2",null,"세모이드?",-1),e("p",null,"왜 h2 안먹냐",-1),e("h2",null,"만드는 방법",-1),e("p",null,"다운로드한 이미지를 A4용지에 꽉 차게 인쇄합니다.",-1)])])}const u=l(o,[["render",s]]);export{u as default};
