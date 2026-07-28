@@ -3,27 +3,14 @@
 </template>
 
 <script setup>
-import { ref, watchEffect, computed } from 'vue'
+import { computed } from 'vue'
+import { useSvgRaw } from '../composables/useSvgRaw'
 
 const props = defineProps(['fill', 'stroke', 'src'])
 
-const svgRaw = ref('') // 원본 SVG 코드 저장
+const svgRaw = useSvgRaw(() => props.src)
 
-// 1. SVG 파일을 가져오는 로직 (클라이언트 사이드에서만 동작)
-watchEffect(async () => {
-    if (process.client && props.src) {
-        try {
-            const response = await fetch(props.src)
-            if (response.ok) {
-                svgRaw.value = await response.text()
-            }
-        } catch (e) {
-            console.error("SVG 로드 실패:", e)
-        }
-    }
-})
-
-// 2. 색상이나 원본 코드가 바뀔 때마다 실시간으로 변환 작업 수행
+// 색상이나 원본 코드가 바뀔 때마다 실시간으로 변환 작업 수행
 const processedSvg = computed(() => {
     if (!svgRaw.value) return ''
 
